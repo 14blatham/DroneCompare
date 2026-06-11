@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkyCompare | Drone Professional Directory &amp; Price Comparison</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#ba1a1a",
+              "on-secondary-container": "#5f6178",
+              "on-secondary-fixed": "#181a2e",
+              "on-tertiary-fixed-variant": "#5d4201",
+              "surface-tint": "#545e76",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed-variant": "#43455b",
+              "outline-variant": "#c5c6cd",
+              "on-tertiary-container": "#ab8844",
+              "inverse-primary": "#bbc6e2",
+              "secondary-fixed-dim": "#c4c4df",
+              "outline": "#75777d",
+              "on-primary": "#ffffff",
+              "on-primary-fixed": "#101b30",
+              "on-error": "#ffffff",
+              "surface-bright": "#fbf8ff",
+              "on-background": "#181a2e",
+              "tertiary-fixed-dim": "#e9c176",
+              "primary-fixed-dim": "#bbc6e2",
+              "surface-container": "#edecff",
+              "surface-container-highest": "#e0e0fc",
+              "tertiary-fixed": "#ffdea5",
+              "on-tertiary-fixed": "#261900",
+              "inverse-on-surface": "#f1efff",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#d7e2ff",
+              "surface-container-high": "#e6e6ff",
+              "surface-variant": "#e0e0fc",
+              "inverse-surface": "#2d2f44",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#ddddf9",
+              "secondary": "#5b5d74",
+              "surface-dim": "#d7d8f4",
+              "tertiary": "#190f00",
+              "secondary-fixed": "#e0e0fc",
+              "on-primary-container": "#828da7",
+              "on-primary-fixed-variant": "#3c475d",
+              "on-surface-variant": "#45474d",
+              "background": "#fbf8ff",
+              "surface-container-low": "#f4f2ff",
+              "surface": "#fbf8ff",
+              "primary-container": "#1b263b",
+              "tertiary-container": "#342300",
+              "primary": "#051125",
+              "on-error-container": "#93000a",
+              "on-surface": "#181a2e"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 max-w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-md z-50 border-b border-slate-200/20 dark:border-slate-800/20">
+<div class="flex items-center gap-12">
+<span class="font-serif italic text-xl font-bold text-slate-900 dark:text-slate-100">SkyCompare</span>
+<div class="hidden md:flex gap-8">
+<a class="font-sans Manrope text-sm font-medium text-slate-900 dark:text-white border-b-2 border-slate-900 dark:border-white pb-1" href="#">Find a Drone Pro</a>
+<a class="font-sans Manrope text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-200" href="#">For Drone Operators</a>
+<a class="font-sans Manrope text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-200" href="#">How it Works</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="hidden md:block font-sans text-sm font-semibold text-primary px-6 py-2 border border-outline-variant/20 hover:bg-surface-container-low transition-all duration-150">Operator Sign-up</button>
+<span class="material-symbols-outlined text-on-surface cursor-pointer" data-icon="menu">menu</span>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center px-8 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Modern architectural house in the English countryside with clean lines, large windows, and manicured lawns at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgJ7iWLMaAGUVte06jsBoxvoK6NbZ4etucUIxYUe3b_YmmVq-eK7IlyygQp0pX6Sxs0at7ZU0iM-NeG-lo_RpZnmCCLoYqejfEKArR_pqiLnKBTYyvpzigiE6wSK3yZLMTFnSxgW2jBwFjmOJ1cSbV9loakCsbLm8K6nEowWo1-jkVyfSLkllFJ-VjomamkNs1BgaUkWyzNZOIXJeHltNl9NwpomBq4oQt6mByQtYKaKbH264ggoJcnEiZUXKXA0lmQCcgz5mHAjW1"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl w-full">
+<h1 class="font-headline text-5xl md:text-7xl text-white tracking-tight leading-tight mb-6">
+                    The Right Drone Pro, <br/><span class="italic text-tertiary-fixed-dim"> Matched Instantly</span>
+</h1>
+<p class="font-body text-lg text-white/80 max-w-xl mb-12 leading-relaxed">
+                    Compare prices and connect directly with verified drone professionals for your commercial property and site requirements.
+                </p>
+<!-- Trade Selector Bento Grid -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-3 max-w-5xl">
+<button class="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 group border border-white/10">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="travel_explore">travel_explore</span>
+<span class="font-label text-xs uppercase tracking-widest">Aerial Surveys</span>
+</button>
+<button class="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 group border border-white/10">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="roofing">roofing</span>
+<span class="font-label text-xs uppercase tracking-widest">Roof Inspections</span>
+</button>
+<button class="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 group border border-white/10">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="device_thermostat">device_thermostat</span>
+<span class="font-label text-xs uppercase tracking-widest">Thermal Imaging</span>
+</button>
+<button class="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 group border border-white/10">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="map">map</span>
+<span class="font-label text-xs uppercase tracking-widest">Mapping &amp; 3D Models</span>
+</button>
+<button class="bg-tertiary-fixed text-primary p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 group col-span-2 md:col-span-1">
+<span class="material-symbols-outlined" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+<span class="font-label text-xs uppercase tracking-widest font-bold">More</span>
+</button>
+</div>
+</div>
+</section>
+<!-- How It Works Section (Commercial Clients) -->
+<section class="py-32 px-8 bg-surface">
+<div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5">
+<span class="font-label text-xs uppercase tracking-widest text-secondary mb-4 block">Process</span>
+<h2 class="font-headline text-4xl text-primary mb-8 leading-tight">Verified Drone Pros, <br/>Connected Directly.</h2>
+<p class="font-body text-secondary leading-relaxed mb-12">We’ve simplified procurement for commercial drone work. No middleman, no delay — just instant matching and direct contact.</p>
+<div class="space-y-12">
+<div class="flex gap-6">
+<span class="font-headline text-4xl text-tertiary-fixed-dim opacity-50">01</span>
+<div>
+<h4 class="font-sans font-bold text-primary mb-2">Submit Your Details</h4>
+<p class="font-body text-sm text-secondary">Input your property details and the specific drone service you need through our intake form.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="font-headline text-4xl text-tertiary-fixed-dim opacity-50">02</span>
+<div>
+<h4 class="font-sans font-bold text-primary mb-2">Instant Matching</h4>
+<p class="font-body text-sm text-secondary">The system instantly generates a list of qualified local drone professionals covering your exact area — complete with price estimates, qualifications, and full contact details.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="font-headline text-4xl text-tertiary-fixed-dim opacity-50">03</span>
+<div>
+<h4 class="font-sans font-bold text-primary mb-2">Hire Independently</h4>
+<p class="font-body text-sm text-secondary">Contact the operator directly to negotiate, ask questions, and book the job. You contract and pay them directly — we never take a commission.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 relative">
+<div class="aspect-[4/3] bg-surface-container-low overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover" data-alt="Professional architect pointing to a blueprint on a tablet in a bright, minimalist office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYf1v6szoVML6Ic9cZKtnNmgrrO-yu95gAxyvwlRWb2zg4JyUwnRKEPSZWxRy1S6FtrCAFkO74eh3fCL5Gr2Mj0DB6JIrMd0QBeaZ72Z5aemjU0jFVrezvheQPXu0k9ysz9_spct5ijRCH2JEAUQJuQX-pXFYN-z_Nz7lOQus1KVKLOHAQf2SMLjDOf1dnkveyqISSDpK8UCQ5sLY8fjCImPmiq4aVFK95cwvugmZx88LTPD8axeRxffquygoz8oLaa_T9CSD4b004"/>
+</div>
+<!-- Overlapping Decorative Element -->
+<div class="absolute -bottom-12 -left-12 bg-primary p-12 hidden lg:block">
+<p class="text-white font-headline text-3xl italic">"Professional, efficient, and straightforward"</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Supplier Value Proposition Section -->
+<section class="py-32 px-8 bg-primary-container relative overflow-hidden">
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<span class="font-label text-xs uppercase tracking-widest text-tertiary-fixed-dim mb-4 block">For Professionals</span>
+<h2 class="font-headline text-4xl md:text-5xl text-white mb-6">Grow Your Drone Business with Zero Commission.</h2>
+<p class="font-body text-white/60 text-lg">We deliver commercial clients ready to book aerial surveys, inspections and mapping work — sent to you instantly, with no middleman.</p>
+</div>
+<a href="supplier.html"><button class="bg-tertiary-fixed text-primary px-10 py-4 font-sans font-bold text-sm tracking-widest uppercase hover:bg-tertiary-fixed-dim transition-colors">Join for free</button></a>
+</div>
+<div class="grid md:grid-cols-3 gap-1">
+<div class="bg-white/5 backdrop-blur-sm p-12 border border-white/10">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl mb-6" data-icon="payments">payments</span>
+<h3 class="font-headline text-2xl text-white mb-4">Cost-Per-Lead Only</h3>
+<p class="font-body text-white/60 text-sm leading-relaxed">£0 joining fees, £0 monthly subscriptions, £0 annual fees, £0 exit fees. You only pay a small advertising fee per lead, billed automatically by direct debit.</p>
+</div>
+<div class="bg-white/5 backdrop-blur-sm p-12 border border-white/10">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl mb-6" data-icon="verified_user">verified_user</span>
+<h3 class="font-headline text-2xl text-white mb-4">Full Control Panel</h3>
+<p class="font-body text-white/60 text-sm leading-relaxed">Choose the exact postcode districts you cover and set your own price estimates for different property criteria. The system displays your live estimates to clients.</p>
+</div>
+<div class="bg-white/5 backdrop-blur-sm p-12 border border-white/10">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl mb-6" data-icon="analytics">analytics</span>
+<h3 class="font-headline text-2xl text-white mb-4">Direct Connection</h3>
+<p class="font-body text-white/60 text-sm leading-relaxed">The client's details and property requirements are sent to you the instant a match occurs. You manage the relationship, the contract, and payment directly — commission-free.</p>
+</div>
+</div>
+</div>
+<!-- Abstract background shape -->
+<div class="absolute right-0 top-0 w-1/3 h-full bg-tertiary-fixed opacity-5 skew-x-12 translate-x-1/2"></div>
+</section>
+<!-- Regional Spotlight -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl text-primary mb-4">Nationwide Coverage</h2>
+<p class="font-body text-secondary">Verified drone operators in every region, matched to your exact postcode.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="group cursor-pointer">
+<div class="overflow-hidden mb-4 aspect-square bg-slate-200">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Nottingham skyline with historical Council House building during a clear day" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg5SeN8KxPtTGPzRsB_ChBmj1C54YPzy8fG9RAGn6D666V2XoXD6Qkp4cU8L-VNZHpT7mp-OfwUUrTtoHaqlnKgR5wR2VmBNcqyTOmpOLyegxZMaheSBJboHy-DA_-a1gN1q0aVohObdfy_AjewxCTP8Otqah8u8fGPIUheiIQ7lCpTl-iR-4mACCZ5HPFjbVAaV-OxxGjDBKIz5bjSDfZ5xbhfBAA5_t9U2pS6WYosDhxHAwq4bi0r1hLxoK7oHRJABWgOJP636KX"/>
+</div>
+<h4 class="font-serif italic text-xl text-primary">Nottingham</h4>
+</div>
+<div class="group cursor-pointer">
+<div class="overflow-hidden mb-4 aspect-square bg-slate-200">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Leicester city center street view featuring Victorian architecture and modern storefronts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2mmsdEo2yAUPvkihi8y5MQlBlKg1u3gUijWRUaixMFdLYUOlbXRMP-czymAjo5ZS4nD8HK7tdGKjUoSlAR2RHuJMhUcIxoI4WvArNSuMXw60KN7_0Fn13NsFWYbGGn_qskTjaPxA2KpyuOZuUxH_HLE5fL0cTZsqKm2RVNuuE0JuRM_5CMXBp19s6zFBB6rULM21C7Kph5MV_SRd6IZ6CWIY3SZEAJIzNAb0UwANFI8Y-QFSPQmbDSJ52uX5ljoQo_n2F19890fQA"/>
+</div>
+<h4 class="font-serif italic text-xl text-primary">Leicester</h4>
+</div>
+<div class="group cursor-pointer">
+<div class="overflow-hidden mb-4 aspect-square bg-slate-200">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Scenic view of Derby city landscape with historical cathedral spire in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7iXIvYBghW-I0zmnFHHIP6IWTIjSpeqwRnY2pafS1EeWjDnjN5nVaolUnAzDCbsxBdZpml_MeSY_6ARBGAKxOOHcEj4rmteaLcOkMU1bidFi8iZXFccIPdo64HDjGxeNdzRIdyVogO7u3wMjrqENzmcrU_YJt_vSos_Lpo2iNcC7etkSJassGrpiI_8U7m4tcKC_xRjEqH3lwbMWtNmptMTZ04ZI--xK4ip9czYJgIZYS85F5w4TuUa9tKUL66zhjc6N40y5mXayL"/>
+</div>
+<h4 class="font-serif italic text-xl text-primary">Derby</h4>
+</div>
+<div class="group cursor-pointer">
+<div class="overflow-hidden mb-4 aspect-square bg-slate-200">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Aerial view of Lincoln Cathedral sitting atop a hill surrounded by medieval streets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJkZWiVMSkwPP1T-AytVAUTAac59u4jZmOLgPrFfUGUkUD7jEV7Q1Fhl38jGFLW5CSpe3yTVCSV5Lrzfx2eK4lxj7RGQ-wVbBUi8sg03mNTiPb77Iyl6zCSDshJPN2EW1dqVzeiVlzy9nML27_wLwFWN5hY377z-b1rIlZ9OZO7Hh_S8l4kPqv-_xIUbYBgYBxy9r0p16IO5jXoM3epAtnFZ2enOhaIEQ9Q9rOBDiQ5zaywAOjPlL0AzGNF02Umf6ETFLvRotkOSHJ"/>
+</div>
+<h4 class="font-serif italic text-xl text-primary">Lincoln</h4>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200/20">
+<div class="w-full py-12 px-8 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-2 md:col-span-1">
+<span class="font-serif text-lg font-bold text-slate-900 dark:text-slate-100 block mb-6">SkyCompare Drone Directory</span>
+<p class="font-sans Manrope text-xs text-slate-500 leading-relaxed max-w-xs">Connecting verified drone professionals with commercial clients across the UK. Compare prices, qualifications and coverage instantly.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-sans Manrope text-xs tracking-wide uppercase font-bold text-slate-900 dark:text-white">Commercial Clients</span>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Aerial Surveys</a>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Roof Inspections</a>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Thermal Imaging</a>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Mapping &amp; 3D Models</a>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Site Progress Monitoring</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-sans Manrope text-xs tracking-wide uppercase font-bold text-slate-900 dark:text-white">Suppliers</span>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Operator Registration</a>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Lead Management</a>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Pricing Models</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-sans Manrope text-xs tracking-wide uppercase font-bold text-slate-900 dark:text-white">Legal</span>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="w-full py-8 px-8 border-t border-slate-200/10 text-center">
+<span class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400">© 2026 SkyCompare Drone Directory. Registered in England &amp; Wales.</span>
+</div>
+<script type="module">
+import { getUser, signOut } from './supabase-config.js';
+
+// Update nav based on auth state
+const { user } = await getUser();
+const navBtns = document.querySelectorAll('nav button, header button');
+const signupBtn = [...navBtns].find(b => b.textContent.includes('Operator Sign-up') || b.textContent.includes('Sign'));
+
+if (user && signupBtn) {
+  signupBtn.textContent = 'Dashboard';
+  signupBtn.addEventListener('click', () => { window.location.href = 'dashboard.html'; });
+
+  // Add sign-out option
+  const signOutBtn = document.createElement('button');
+  signOutBtn.textContent = 'Sign Out';
+  signOutBtn.className = 'text-slate-500 text-sm font-medium hover:text-slate-900 transition-colors';
+  signOutBtn.addEventListener('click', async () => {
+    await signOut();
+    window.location.reload();
+  });
+  signupBtn.parentElement.appendChild(signOutBtn);
+} else if (signupBtn) {
+  signupBtn.addEventListener('click', () => { window.location.href = 'loginpage.html'; });
+}
+
+// Wire up trade category links to requirement pages
+const tradeLinks = {
+  'aerial': 'service.html',
+  'thermal': 'ThermalImagingRequirements.html',
+  'roof': 'RoofInspectionRequirements.html',
+  'mapping': 'MappingRequirements.html',
+  'monitoring': 'service.html'
+};
+
+document.querySelectorAll('a, button').forEach(el => {
+  const text = el.textContent.toLowerCase().trim();
+  for (const [key, url] of Object.entries(tradeLinks)) {
+    if (text.includes(key) && !el.href?.includes('.html')) {
+      el.addEventListener('click', (e) => { e.preventDefault(); window.location.href = url; });
+    }
+  }
+});
+</script>
+</footer>
+<script src="page-transitions.js"></script>
+</body></html>

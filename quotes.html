@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="./tailwind.css" rel="stylesheet"/>
+<script>window.tailwind = window.tailwind || {}; window.tailwind.config = window.tailwind.config || {};</script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#ba1a1a",
+              "on-secondary-container": "#5f6178",
+              "on-secondary-fixed": "#181a2e",
+              "on-tertiary-fixed-variant": "#5d4201",
+              "surface-tint": "#545e76",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed-variant": "#43455b",
+              "outline-variant": "#c5c6cd",
+              "on-tertiary-container": "#ab8844",
+              "inverse-primary": "#bbc6e2",
+              "secondary-fixed-dim": "#c4c4df",
+              "outline": "#75777d",
+              "on-primary": "#ffffff",
+              "on-primary-fixed": "#101b30",
+              "on-error": "#ffffff",
+              "surface-bright": "#fbf8ff",
+              "on-background": "#181a2e",
+              "tertiary-fixed-dim": "#e9c176",
+              "primary-fixed-dim": "#bbc6e2",
+              "surface-container": "#edecff",
+              "surface-container-highest": "#e0e0fc",
+              "tertiary-fixed": "#ffdea5",
+              "on-tertiary-fixed": "#261900",
+              "inverse-on-surface": "#f1efff",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#d7e2ff",
+              "surface-container-high": "#e6e6ff",
+              "surface-variant": "#e0e0fc",
+              "inverse-surface": "#2d2f44",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#ddddf9",
+              "secondary": "#5b5d74",
+              "surface-dim": "#d7d8f4",
+              "tertiary": "#190f00",
+              "secondary-fixed": "#e0e0fc",
+              "on-primary-container": "#828da7",
+              "on-primary-fixed-variant": "#3c475d",
+              "on-surface-variant": "#45474d",
+              "background": "#fbf8ff",
+              "surface-container-low": "#f4f2ff",
+              "surface": "#fbf8ff",
+              "primary-container": "#1b263b",
+              "tertiary-container": "#342300",
+              "primary": "#051125",
+              "on-error-container": "#93000a",
+              "on-surface": "#181a2e"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 max-w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200/20 dark:border-slate-800/20 z-50">
+<div class="flex items-center gap-8">
+<span class="font-serif italic text-xl font-bold text-slate-900 dark:text-slate-100">SkyCompare</span>
+<div class="hidden md:flex items-center gap-6 font-sans Manrope text-sm font-medium">
+<a class="text-slate-900 dark:white border-b-2 border-slate-900 dark:border-white pb-1 transition-colors duration-200" href="#">Find a Drone Pro</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-200" href="#">For Drone Operators</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-200" href="#">How it Works</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-sm border-b border-transparent focus-within:border-primary transition-all">
+<span class="material-symbols-outlined text-outline text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 font-medium" placeholder="Search operators..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 text-sm font-bold rounded-sm transition-transform active:scale-95">Operator Sign-up</button>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12">
+<h1 class="font-headline text-5xl tracking-tight text-primary mb-4">Quote Comparison</h1>
+<p class="font-body text-secondary max-w-2xl text-lg leading-relaxed">
+                Compare live price estimates from verified drone professionals covering your exact area. Based on your aerial survey requirement in <span class="text-primary font-bold">Nottingham</span>.
+            </p>
+</header>
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Filter Sidebar -->
+<aside class="w-full lg:w-72 flex-shrink-0">
+<div class="sticky top-28 space-y-10">
+<div>
+<h3 class="font-headline text-xl text-primary mb-4">Filter Results</h3>
+<div class="h-px bg-outline-variant/20 w-12 mb-6"></div>
+<div class="space-y-8">
+<!-- Distance Filter -->
+<section>
+<label class="font-label text-xs uppercase tracking-widest text-secondary block mb-3">Radius (Miles)</label>
+<div class="space-y-2">
+<div class="flex items-center justify-between text-sm">
+<span class="text-on-surface-variant font-medium">5 miles</span>
+<span class="text-on-surface-variant font-medium text-xs opacity-50">50 miles</span>
+</div>
+<input class="w-full h-1 bg-surface-container-highest appearance-none cursor-pointer accent-primary" type="range"/>
+</div>
+</section>
+<!-- Price Range -->
+<section>
+<label class="font-label text-xs uppercase tracking-widest text-secondary block mb-3">Price Range</label>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-low p-3 rounded-sm">
+<span class="text-[10px] text-outline block">Min</span>
+<span class="font-bold text-primary">£300</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-sm">
+<span class="text-[10px] text-outline block">Max</span>
+<span class="font-bold text-primary">£1,200</span>
+</div>
+</div>
+</section>
+<!-- Rating -->
+<section>
+<label class="font-label text-xs uppercase tracking-widest text-secondary block mb-3">Minimum Rating</label>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-on-surface-variant group-hover:text-primary flex items-center gap-1">
+                                            4.5+ <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span> Excellent
+                                        </span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-on-surface-variant group-hover:text-primary flex items-center gap-1">
+                                            4.0+ <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span> Good
+                                        </span>
+</label>
+</div>
+</section>
+</div>
+</div>
+</div>
+</aside>
+<!-- Results Grid -->
+<div id="quotes-container" class="flex-grow space-y-16">
+<!-- Quote Card 1 -->
+<article class="bg-surface-container-lowest transition-all">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3 relative">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-md">
+<img alt="Surveyor Professional" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Modern architectural office interior with a professional surveyor looking at blueprints in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-ZNF9X5ivk-Oi-vkl-M0oEmjTcw2HFveYvybHoq95AMfPIN0AhFryv36OqDXhgjyqadxxJnO4wx5l8j95qRuhGHxyJd920oD8tH6B8BpCFfsVfrcXr1z1rpCK6-gvRg9wl6NfJ6bqBTSZyB5DiVGnOuW88luTM_-hW7LaVIB5MUv8U7exfHLjL3vq7itRxaAZHgBnaShjlHQ1yEENvzTy9pWxkHBRv0sC7i_N1EYr1zxiFlAGFs6MaaSUuZRM8ZnmxJN8wgTKLusx"/>
+</div>
+<div class="absolute -bottom-4 -right-4 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-2 font-headline italic font-bold text-lg shadow-xl">
+                                Verified Expert
+                            </div>
+</div>
+<div class="md:w-2/3 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-headline text-3xl text-primary">Skyline Aerial Surveys</h2>
+<p class="font-label text-xs text-secondary mt-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">location_on</span> 12.4 miles away • CAA Authorised
+                                        </p>
+</div>
+<div class="text-right">
+<div class="font-headline text-3xl text-primary">£480 - £550</div>
+<div class="text-[10px] text-outline uppercase tracking-widest font-bold">Estimated Quote</div>
+</div>
+</div>
+<div class="flex gap-2 mb-6">
+<span class="px-3 py-1 bg-secondary-container/40 rounded-full font-label text-[10px] uppercase tracking-wider text-secondary">Aerial Survey</span>
+<span class="px-3 py-1 bg-secondary-container/40 rounded-full font-label text-[10px] uppercase tracking-wider text-secondary">4K Imaging</span>
+<span class="px-3 py-1 bg-secondary-container/40 rounded-full font-label text-[10px] uppercase tracking-wider text-secondary">Roof Reports</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-6 max-w-xl">
+                                    Specialising in commercial building and roof surveys. Our CAA-authorised pilots deliver annotated 4K imagery and condition reports within 48 hours of the flight.
+                                </p>
+</div>
+<div class="flex items-center gap-4">
+<button class="contact-supplier-btn bg-primary text-on-primary px-8 py-3 text-sm font-bold transition-transform active:scale-95" data-supplier-name="Skyline Aerial Surveys" data-supplier-detail="Aerial Survey · 12.4 miles away">Contact Supplier</button>
+<button class="bg-transparent border border-outline-variant/30 text-primary px-8 py-3 text-sm font-bold hover:bg-surface-container-low transition-colors">View Profile</button>
+<div class="ml-auto flex items-center gap-2">
+<span class="font-headline text-xl text-primary">4.9</span>
+<div class="flex text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Quote Card 2 -->
+<article class="bg-surface-container-lowest transition-all">
+<div class="flex flex-col md:flex-row-reverse gap-8">
+<div class="md:w-1/3 relative">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-md">
+<img alt="Architectural Detailing" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Minimalist architectural detail of a modern concrete building with sharp shadows and clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkUrV6nryWcfGPLMPxHCshari2cygeZRwpf6B1CSpkQ_f4zt6d_7I89Hlhq49wSpL7yesTAsNL0KPDtP_6g04cfOfnIpcfkd4T0J_SqxUyyPdzR_brtJkFWIVFhwzRicZ-ibOHbZXiCe1ZKrlWscew4gJ1OFYoYeN_BQy4SdMnS7Cs7OSt8p68uzADNQ6Q1hhOARu-cpiE0wy89ZwmyMtasRQTXmTvth8Q66bOmb5qYsGxTItWE42jEGqrIdAi0rX7DHEf3877eAil"/>
+</div>
+</div>
+<div class="md:w-2/3 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-headline text-3xl text-primary">Trent Thermal &amp; Inspection</h2>
+<p class="font-label text-xs text-secondary mt-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">location_on</span> 4.1 miles away • Highly Rated
+                                        </p>
+</div>
+<div class="text-right">
+<div class="font-headline text-3xl text-primary">£620 - £750</div>
+<div class="text-[10px] text-outline uppercase tracking-widest font-bold">Estimated Quote</div>
+</div>
+</div>
+<div class="flex gap-2 mb-6">
+<span class="px-3 py-1 bg-secondary-container/40 rounded-full font-label text-[10px] uppercase tracking-wider text-secondary">Thermal Imaging</span>
+<span class="px-3 py-1 bg-secondary-container/40 rounded-full font-label text-[10px] uppercase tracking-wider text-secondary">Solar PV Specialist</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-6 max-w-xl">
+                                    With over a decade of flight experience across the UK, we pride ourselves on precision. Our inspections include radiometric thermal imaging to detect heat loss and faults others miss.
+                                </p>
+</div>
+<div class="flex items-center gap-4">
+<button class="contact-supplier-btn bg-primary text-on-primary px-8 py-3 text-sm font-bold transition-transform active:scale-95" data-supplier-name="Trent Thermal &amp; Inspection" data-supplier-detail="Thermal Imaging · 4.1 miles away">Contact Supplier</button>
+<button class="bg-transparent border border-outline-variant/30 text-primary px-8 py-3 text-sm font-bold hover:bg-surface-container-low transition-colors">View Profile</button>
+<div class="ml-auto flex items-center gap-2">
+<span class="font-headline text-xl text-primary">4.7</span>
+<div class="flex text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Quote Card 3 -->
+<article class="bg-surface-container-lowest transition-all">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3 relative">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-md">
+<img alt="Commercial Building" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Low angle shot of a modern glass skyscraper reflecting a bright white sky with crisp architectural lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZmzDdlxb2LpEdwPTz2lRNKaCmuP8mC7jENUR_xaMk822ceN6T48_WNIzu2lEZZwpVHIyEeq320VildKKBY7BT5izYFjZn1nLTPty4BXXL9skbCryQcou6HS4F2fnmY8WG5f1hZJdxuVW2xk3NgCIUAa6hctAH8qmDWh1l5Gi_N-hUC9S-V2hhXnLmpCtzXeEdJyEyfnTO9Cmph7sRDY1z0Exz7DUEbZgsC4iCfiQpjRJk66PMv5ZPkjJ5pSBp-PFQIJSMVMrIuJoH"/>
+</div>
+</div>
+<div class="md:w-2/3 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-headline text-3xl text-primary">Leicester Drone Mapping Co.</h2>
+<p class="font-label text-xs text-secondary mt-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">location_on</span> 21.8 miles away • Professional
+                                        </p>
+</div>
+<div class="text-right">
+<div class="font-headline text-3xl text-primary">£410 - £490</div>
+<div class="text-[10px] text-outline uppercase tracking-widest font-bold">Estimated Quote</div>
+</div>
+</div>
+<div class="flex gap-2 mb-6">
+<span class="px-3 py-1 bg-secondary-container/40 rounded-full font-label text-[10px] uppercase tracking-wider text-secondary">Orthomosaic</span>
+<span class="px-3 py-1 bg-secondary-container/40 rounded-full font-label text-[10px] uppercase tracking-wider text-secondary">3D Models</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-6 max-w-xl">
+                                    Focusing on efficiency and clarity. We deliver jargon-free mapping outputs — orthomosaics, point clouds and volumetrics — built for project teams since 2018.
+                                </p>
+</div>
+<div class="flex items-center gap-4">
+<button class="contact-supplier-btn bg-primary text-on-primary px-8 py-3 text-sm font-bold transition-transform active:scale-95" data-supplier-name="Leicester Drone Mapping Co." data-supplier-detail="Mapping &amp; 3D Models · 21.8 miles away">Contact Supplier</button>
+<button class="bg-transparent border border-outline-variant/30 text-primary px-8 py-3 text-sm font-bold hover:bg-surface-container-low transition-colors">View Profile</button>
+<div class="ml-auto flex items-center gap-2">
+<span class="font-headline text-xl text-primary">4.5</span>
+<div class="flex text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0.5;">star_half</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 mt-24">
+<div class="w-full py-12 px-8 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-2 md:col-span-1">
+<span class="font-serif text-lg font-bold text-slate-900 dark:text-slate-100 block mb-4">SkyCompare</span>
+<p class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500">© 2026 SkyCompare Drone Directory. Registered in England &amp; Wales.</p>
+</div>
+<div>
+<h4 class="font-sans Manrope text-xs tracking-wide uppercase font-bold text-slate-900 dark:text-white mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Thermal Imaging</a></li>
+<li><a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Roof Inspections</a></li>
+<li><a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Aerial Surveys</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans Manrope text-xs tracking-wide uppercase font-bold text-slate-900 dark:text-white mb-4">Compliance</h4>
+<ul class="space-y-2">
+<li><a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a></li>
+<li><a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans Manrope text-xs tracking-wide uppercase font-bold text-slate-900 dark:text-white mb-4">Support</h4>
+<ul class="space-y-2">
+<li><a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Operator Registration</a></li>
+<li><a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 dark:text-slate-400 hover:underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Site Monitoring</a></li>
+</ul>
+</div>
+</div>
+<script type="module">
+import { supabase, getUser } from './supabase-config.js';
+
+const params = new URLSearchParams(window.location.search);
+const projectId = params.get('project');
+
+// Load matching suppliers for the project's trade type
+async function loadQuotes() {
+  let tradeType = 'Aerial Survey'; // default
+  if (projectId) {
+    const { data: project } = await supabase.from('project_summary').select('*').eq('id', projectId).single();
+    if (project) {
+      tradeType = project.trade_type;
+      // Update the header description
+      const header = document.querySelector('header p');
+      if (header && project.property_postcode) {
+        header.innerHTML = `Review tailored quotes from verified professionals across the UK. Based on your <span class="text-primary font-bold">${project.property_type || ''}</span> in <span class="text-primary font-bold">${project.property_postcode}</span>.`;
+      }
+    }
+  }
+
+  // Fetch active suppliers for this trade
+  const { data: suppliers } = await supabase
+    .from('suppliers')
+    .select('*, reviews(overall_rating)')
+    .eq('trade_type', tradeType)
+    .eq('is_active', true)
+    .order('rating_avg', { ascending: false })
+    .limit(10);
+
+  if (!suppliers || suppliers.length === 0) {
+    if (projectId) {
+      const container = document.getElementById('quotes-container');
+      container.innerHTML = `
+      <div class="text-center py-16 bg-surface-container-lowest">
+        <span class="material-symbols-outlined text-5xl text-outline-variant mb-4">hourglass_top</span>
+        <h3 class="font-headline text-2xl text-primary mb-2">We're finding professionals for you</h3>
+        <p class="text-on-surface-variant text-sm max-w-md mx-auto">Your request has been received and we're matching it with verified suppliers in your area. Check back shortly or we'll be in touch directly.</p>
+      </div>` + container.innerHTML;
+    }
+    return;
+  }
+
+  const container = document.getElementById('quotes-container');
+  const escapeAttr = (value = '') => String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  // Keep existing hardcoded cards as fallback but prepend real data
+  const realCards = suppliers.map((s, i) => {
+    const stars = Array.from({length: 5}, (_, j) =>
+      `<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' ${j < Math.round(s.rating_avg) ? 1 : 0};">star</span>`
+    ).join('');
+
+    return `
+    <article class="bg-surface-container-lowest transition-all">
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-2/3 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h2 class="font-headline text-3xl text-primary">${s.company_name}</h2>
+                <p class="font-label text-xs text-secondary mt-1 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-xs">location_on</span> ${s.primary_postcode} • ${s.is_verified ? 'Verified' : 'Pending Verification'}
+                </p>
+              </div>
+              <div class="text-right">
+                <div class="font-headline text-3xl text-primary">£${s.consultation_price || '—'} - £${s.survey_price || '—'}</div>
+                <div class="text-[10px] text-outline uppercase tracking-widest font-bold">Estimated Quote</div>
+              </div>
+            </div>
+            <div class="flex gap-2 mb-6">
+              <span class="px-3 py-1 bg-secondary-container/40 rounded-full font-label text-[10px] uppercase tracking-wider text-secondary">${s.trade_type}</span>
+              <span class="px-3 py-1 bg-secondary-container/40 rounded-full font-label text-[10px] uppercase tracking-wider text-secondary">${s.years_in_business}+ years</span>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed text-sm mb-6 max-w-xl">${s.description || 'Professional ' + s.trade_type.toLowerCase() + ' drone operator serving your area.'}</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="contact-supplier-btn bg-primary text-on-primary px-8 py-3 text-sm font-bold transition-transform active:scale-95" data-supplier-name="${escapeAttr(s.company_name)}" data-supplier-detail="${escapeAttr(`${s.trade_type} · ${s.primary_postcode}`)}">Contact Supplier</button>
+            <div class="ml-auto flex items-center gap-2">
+              <span class="font-headline text-xl text-primary">${(s.rating_avg || 0).toFixed(1)}</span>
+              <div class="flex text-tertiary-fixed-dim">${stars}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+
+  if (realCards) container.innerHTML = realCards + container.innerHTML;
+}
+
+loadQuotes();
+
+window.contactSupplier = async (name, detailOrPostcode, tradeType = null) => {
+  const { user } = await getUser();
+  if (!user) {
+    const redirect = encodeURIComponent(window.location.pathname + window.location.search);
+    window.location.href = `loginpage.html?redirect=${redirect}`;
+    return;
+  }
+
+  const detail = tradeType ? `${tradeType} · ${detailOrPostcode}` : (detailOrPostcode || '');
+  document.getElementById('sq-modal-name').textContent = name;
+  document.getElementById('sq-modal-detail').textContent = detail;
+  document.getElementById('supplier-contact-modal').classList.remove('hidden');
+};
+
+document.getElementById('quotes-container').addEventListener('click', async (event) => {
+  const btn = event.target.closest('.contact-supplier-btn');
+  if (!btn) return;
+  await window.contactSupplier(btn.dataset.supplierName || 'Supplier', btn.dataset.supplierDetail || '');
+});
+</script>
+</footer>
+
+<!-- Supplier Contact Modal -->
+<div id="supplier-contact-modal" class="fixed inset-0 z-[9999] flex items-center justify-center bg-primary/60 backdrop-blur-sm hidden" onclick="if(event.target===this)this.classList.add('hidden')">
+  <div class="bg-surface-container-lowest w-full max-w-sm mx-4 shadow-2xl">
+    <div class="bg-primary px-8 py-6 flex justify-between items-start">
+      <div>
+        <p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-primary/50 mb-1">Supplier Details</p>
+        <h2 id="sq-modal-name" class="font-headline text-2xl text-on-primary"></h2>
+        <p id="sq-modal-detail" class="text-on-primary/70 text-sm font-body mt-1"></p>
+      </div>
+      <button onclick="document.getElementById('supplier-contact-modal').classList.add('hidden')" class="text-on-primary/50 hover:text-on-primary transition-colors mt-1">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="p-8">
+      <div class="flex items-start gap-3 bg-surface-container-low p-4 rounded-sm">
+        <span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings:'FILL' 1">verified</span>
+        <p class="text-sm font-body text-on-surface-variant leading-relaxed">Your enquiry has been matched with this supplier. A representative will contact you within <strong class="text-primary">24 hours</strong>.</p>
+      </div>
+    </div>
+    <div class="px-8 pb-8">
+      <button onclick="document.getElementById('supplier-contact-modal').classList.add('hidden')" class="w-full border border-outline-variant/20 py-3 text-xs font-bold uppercase tracking-widest text-primary hover:bg-surface-container-low transition-colors">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+<script src="page-transitions.js"></script>
+</body></html>

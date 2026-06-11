@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#181a2e",
+                    "on-tertiary-fixed-variant": "#5d4201",
+                    "tertiary": "#190f00",
+                    "on-primary-container": "#828da7",
+                    "surface": "#fbf8ff",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#5b5d74",
+                    "outline": "#75777d",
+                    "on-secondary-container": "#5f6178",
+                    "surface-tint": "#545e76",
+                    "surface-container-highest": "#e0e0fc",
+                    "primary-container": "#1b263b",
+                    "on-primary-fixed-variant": "#3c475d",
+                    "outline-variant": "#c5c6cd",
+                    "on-tertiary-container": "#ab8844",
+                    "on-secondary-fixed": "#181a2e",
+                    "background": "#fbf8ff",
+                    "on-background": "#181a2e",
+                    "on-surface-variant": "#45474d",
+                    "secondary-fixed-dim": "#c4c4df",
+                    "on-secondary-fixed-variant": "#43455b",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e0e0fc",
+                    "on-tertiary-fixed": "#261900",
+                    "on-primary-fixed": "#101b30",
+                    "secondary-fixed": "#e0e0fc",
+                    "primary-fixed": "#d7e2ff",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#d7d8f4",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f1efff",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#342300",
+                    "inverse-surface": "#2d2f44",
+                    "tertiary-fixed-dim": "#e9c176",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#edecff",
+                    "primary": "#051125",
+                    "surface-container-high": "#e6e6ff",
+                    "surface-container-low": "#f4f2ff",
+                    "inverse-primary": "#bbc6e2",
+                    "primary-fixed-dim": "#bbc6e2",
+                    "tertiary-fixed": "#ffdea5",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#ddddf9",
+                    "surface-bright": "#fbf8ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Newsreader"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Manrope"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .architectural-gradient {
+            background: linear-gradient(135deg, #051125 0%, #1b263b 100%);
+        }
+        .ghost-border {
+            border: 1px solid rgba(197, 198, 205, 0.2);
+        }
+        .ambient-shadow {
+            box-shadow: 0 24px 40px 0 rgba(24, 26, 46, 0.06);
+        }
+        .input-line-transition {
+            transition: all 0.2s ease-in-out;
+            border-bottom: 1px solid transparent;
+        }
+        .input-line-transition:focus-within {
+            border-bottom: 1px solid #051125;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<main class="min-h-screen flex flex-col md:flex-row">
+<!-- Left Side: Visual Narrative -->
+<div class="relative hidden md:flex md:w-1/2 lg:w-3/5 architectural-gradient overflow-hidden">
+<!-- Background Image with Texture Overlay -->
+<div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
+<img alt="Architectural detail" class="w-full h-full object-cover" data-alt="Close-up of a sophisticated modern architectural blueprint with white technical lines on a deep navy textured paper background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEXDqSwjA2SMxMO1Y6fcrwLK3u57rDu4dseMTohFXhq6Yy3pztc2pz12Rng1X_0T38OuTD7dgQjJ0Vgmq9J5qajmseecQWthXTp-jhI6QT0oW6-Rh8nScXCARe67WI1Y0aZnmVidt-GXg9Y4vvVIAWeZQJ9ZkI25Y1MsyCIHQG3w-YdYaUalBCFUR6lG8Jv1PEU4Ir8Q9reDevpSVHGSjzLRb9IJONqtXMrM2fAsBmvGGVM_n1cYxKvo-EXrS5IimC9FgymvQODT6l"/>
+</div>
+<!-- Content Overlay -->
+<div class="relative z-10 flex flex-col justify-between p-16 w-full">
+<div>
+<h1 class="text-surface font-headline text-2xl font-bold tracking-tight mb-2">SkyCompare</h1>
+<div class="w-12 h-0.5 bg-tertiary-fixed-dim"></div>
+</div>
+<div class="max-w-xl">
+<h2 class="text-surface font-headline text-5xl font-bold leading-tight mb-6">Build your trade journey with confidence.</h2>
+<p class="text-on-primary-container font-body text-lg leading-relaxed max-w-md">
+                        Create your account to start comparing verified drone professionals and managing your projects with complete clarity.
+                    </p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
+<img alt="Master Builder" data-alt="Portrait of a professional master builder in high-end workwear, studio lighting, clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ0fiqu5ApRruRG_mR2Kt1behnX0axraIY2GxMEYRlawX0Uw-ve4pGHoVR25niPCvcagc5nCzYAJTK-3ccp590QE4TLyO7mhgCvqDBUhS_2kKA3j8JjnsErF_i8l8yxWMM0cVAJIk3T2q4Z5_D0PXbmQSkZ6TEYO5w-6rnYlUg960HkNm9Y746fdrDzXgMOVtMugDVEZ2BNMKty6Qtc2c_SNykR23cAOJFjPmyUYWxnbm8qPXCkNvccHxzbefYgIe3v17H2V2iqUxP"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
+<img alt="Interior Architect" data-alt="Close-up portrait of a female interior architect, professional aesthetic, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA65KSRfLaHyMzaW4NL3SeVxxIT6BY17Fr7KCP5sVvXOXmVvYUJHh1EjK57-oopPzQPcVzeYrQQFnMvH0Q4Eq_qmN6SAmLGE4wKhUKgfZlOar2fjczjJ_Q0xNbGRk7nIsjbBBjy71_wUBCGBtqb2MMaiLf7s3UMkGXqNl1dOb6TaHY9XEFvKuLnv4O96MfX7tr2eqGu9v4FaBufnrMJJzxoZ-cdXrY3r7bbxrSwP49Rm4Wee_qRJss4YYdqmiPqi-mrRpYkO9huUj70"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
+<img alt="Artisan Carpenter" data-alt="Artisan carpenter in a workshop environment, warm lighting, focused expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjwy4QMIih6gK4IGU5SuiCrmzRfANM_hTXS_azHBi3ZPwH3srejKiy_NMsFck7y4sxbsThvPMCMubJQdeKgGQT9NqX2mVhopGbgnDH9x3y1FMJn6T_DsMToUf5tLeMrhkwWAnajvJj10b9B85H5FihSb0UcglgFkPTA4LMN6nKgFcoX0Ku_6ejV3tDCl-OFJ8eVjdfhgHh9zXWpg7DhvW67_aPcNmOjKHv29ez77KRx58noCYSM0Iiv8pEsiQOVN-wdUjirycbmaRC"/>
+</div>
+</div>
+<p class="text-surface-container-highest text-sm font-label tracking-wide">
+                        TRUSTED BY COMMERCIAL CLIENTS UK-WIDE
+                    </p>
+</div>
+</div>
+</div>
+<!-- Right Side: Interaction Layer -->
+<div class="flex-1 flex flex-col bg-surface-container-low px-8 py-12 md:px-16 lg:px-24 justify-center items-center">
+<!-- Mobile Logo -->
+<div class="md:hidden self-start mb-12">
+<h1 class="text-primary font-headline text-xl font-bold tracking-tight">SkyCompare</h1>
+</div>
+<div class="w-full max-w-md space-y-10">
+<!-- Header Section -->
+<div class="space-y-3">
+<span class="text-tertiary-fixed-dim font-label text-xs font-bold uppercase tracking-widest">New Account</span>
+<h3 class="text-primary font-headline text-3xl font-bold">Create Your Profile</h3>
+<p class="text-secondary font-body text-sm leading-relaxed">
+                        Register in under a minute and start receiving instant operator matches.
+                    </p>
+</div>
+<!-- Form Section -->
+<form class="space-y-6" id="signup-form">
+<!-- Full Name Field -->
+<div class="space-y-2 group">
+<label class="text-on-surface-variant font-label text-xs font-semibold uppercase tracking-wider block" for="full-name">Full Name</label>
+<div class="relative bg-surface-container-lowest input-line-transition p-1">
+<div class="flex items-center px-3 py-2">
+<span class="material-symbols-outlined text-outline-variant mr-3 text-sm">person</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface font-body text-sm placeholder:text-outline-variant/60 py-1" id="full-name" name="full_name" placeholder="e.g. Alex Harper" type="text"/>
+</div>
+</div>
+</div>
+<!-- Email Field -->
+<div class="space-y-2 group">
+<label class="text-on-surface-variant font-label text-xs font-semibold uppercase tracking-wider block" for="email">Email Address</label>
+<div class="relative bg-surface-container-lowest input-line-transition p-1">
+<div class="flex items-center px-3 py-2">
+<span class="material-symbols-outlined text-outline-variant mr-3 text-sm">mail</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface font-body text-sm placeholder:text-outline-variant/60 py-1" id="email" name="email" placeholder="e.g. client@guildgable.com" type="email"/>
+</div>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2 group">
+<label class="text-on-surface-variant font-label text-xs font-semibold uppercase tracking-wider" for="password">Password</label>
+<div class="relative bg-surface-container-lowest input-line-transition p-1">
+<div class="flex items-center px-3 py-2">
+<span class="material-symbols-outlined text-outline-variant mr-3 text-sm">lock</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface font-body text-sm placeholder:text-outline-variant/60 py-1" id="password" name="password" placeholder="At least 8 characters" type="password"/>
+<button class="material-symbols-outlined text-outline-variant cursor-pointer text-sm hover:text-primary transition-colors" id="toggle-password" type="button">visibility</button>
+</div>
+</div>
+</div>
+<!-- Confirm Password Field -->
+<div class="space-y-2 group">
+<label class="text-on-surface-variant font-label text-xs font-semibold uppercase tracking-wider" for="confirm-password">Confirm Password</label>
+<div class="relative bg-surface-container-lowest input-line-transition p-1">
+<div class="flex items-center px-3 py-2">
+<span class="material-symbols-outlined text-outline-variant mr-3 text-sm">enhanced_encryption</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface font-body text-sm placeholder:text-outline-variant/60 py-1" id="confirm-password" name="confirm_password" placeholder="Re-enter password" type="password"/>
+<button class="material-symbols-outlined text-outline-variant cursor-pointer text-sm hover:text-primary transition-colors" id="toggle-confirm-password" type="button">visibility</button>
+</div>
+</div>
+</div>
+<!-- Consent -->
+<div class="flex items-center space-x-3 py-2">
+<input class="w-4 h-4 border-outline-variant rounded-sm text-primary focus:ring-primary/20" id="terms" type="checkbox"/>
+<label class="text-secondary font-body text-xs cursor-pointer" for="terms">
+                        I agree to the Terms and Privacy Policy
+                    </label>
+</div>
+<!-- Actions -->
+<div class="pt-4 space-y-4">
+<button class="w-full bg-primary text-on-primary font-label text-sm font-bold uppercase tracking-widest py-4 rounded-sm hover:opacity-90 transition-all transform active:scale-[0.99] flex items-center justify-center gap-2" id="submit-btn" type="submit">
+                            Create Account
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<div class="flex items-center gap-4 py-2">
+<div class="h-px flex-1 bg-outline-variant/20"></div>
+<span class="text-[10px] font-label text-outline-variant font-bold uppercase tracking-tighter">or sign up with</span>
+<div class="h-px flex-1 bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 py-3 px-4 bg-surface-container-lowest ghost-border rounded-sm hover:bg-surface transition-colors" id="google-signup" type="button">
+<img alt="Google" class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyVTaoL9Nflvjcw2qh16R2Dwo8Fu44d7Pv0MB5mMFIRCVC0ClCJxKhz7W58DQqJ0ZCjKxLMuSCSTVz9TIM5JN37Sbe_e0jRGtDYMG1JxrHJbhJp41HKVuILZnxCzujYuISAS4asoK6pmMlo-5KFZYn1cS9u1l_24nNBLo0MurxVBsoAwIt0CfAimczbBowKKzjfYsG4AItW0UXHegngeNeYWckCBpIE_QaqR0E8mTGO3BLLnb3bQzSJJyO2zTcQH32YRg6CjZ2zLoK"/>
+<span class="text-primary font-label text-[10px] font-bold uppercase tracking-wider">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 bg-surface-container-lowest ghost-border rounded-sm hover:bg-surface transition-colors" id="apple-signup" type="button">
+<span class="material-symbols-outlined text-sm text-primary">ios</span>
+<span class="text-primary font-label text-[10px] font-bold uppercase tracking-wider">Apple</span>
+</button>
+</div>
+</div>
+</form>
+<!-- Footer Call to Action -->
+<div class="pt-8 text-center border-t border-outline-variant/10">
+<p class="text-secondary font-body text-sm">
+                        Already have an account?
+                        <a class="text-primary font-bold ml-1 hover:text-tertiary-fixed-dim transition-colors" href="loginpage.html">Sign in</a>
+</p>
+</div>
+</div>
+<!-- Footer Links (Responsive) -->
+<footer class="mt-auto pt-16 w-full max-w-md">
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2 opacity-60">
+<a class="text-[10px] font-label uppercase tracking-widest text-secondary hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-[10px] font-label uppercase tracking-widest text-secondary hover:text-primary" href="#">Terms of Service</a>
+<a class="text-[10px] font-label uppercase tracking-widest text-secondary hover:text-primary" href="#">Trade Standards</a>
+</div>
+<p class="mt-4 text-center text-[9px] font-label uppercase tracking-[0.2em] text-outline-variant">
+                    © 2026 SkyCompare &amp; A Tool for Drone Professionals
+                </p>
+</footer>
+</div>
+</main>
+<script type="module">
+import { signUp, signInWithGoogle, signInWithApple, getUser } from './supabase-config.js';
+
+const { user } = await getUser();
+if (user) window.location.href = 'dashboard.html';
+
+const form = document.getElementById('signup-form');
+const submitBtn = document.getElementById('submit-btn');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const fullName = document.getElementById('full-name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirm-password').value;
+  const termsAccepted = document.getElementById('terms').checked;
+
+  if (!fullName || !email || !password || !confirmPassword) {
+    alert('Please complete all required fields.');
+    return;
+  }
+
+  if (password.length < 8) {
+    alert('Password must be at least 8 characters long.');
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    alert('Passwords do not match.');
+    return;
+  }
+
+  if (!termsAccepted) {
+    alert('Please accept the terms to continue.');
+    return;
+  }
+
+  submitBtn.innerHTML = 'Creating account... <span class="material-symbols-outlined text-sm">hourglass_top</span>';
+  submitBtn.disabled = true;
+
+  const { error } = await signUp(email, password, { role: 'homeowner', full_name: fullName });
+
+  if (error) {
+    alert(error.message);
+    submitBtn.innerHTML = 'Create Account <span class="material-symbols-outlined text-sm">arrow_forward</span>';
+    submitBtn.disabled = false;
+    return;
+  }
+
+  window.location.href = 'emailverificationlandingpage.html';
+});
+
+document.getElementById('google-signup').addEventListener('click', async () => {
+  const { error } = await signInWithGoogle();
+  if (error) alert(error.message);
+});
+
+document.getElementById('apple-signup').addEventListener('click', async () => {
+  const { error } = await signInWithApple();
+  if (error) alert(error.message);
+});
+
+function bindVisibilityToggle(toggleId, inputId) {
+  const toggle = document.getElementById(toggleId);
+  const input = document.getElementById(inputId);
+  toggle.addEventListener('click', () => {
+    const hidden = input.type === 'password';
+    input.type = hidden ? 'text' : 'password';
+    toggle.textContent = hidden ? 'visibility_off' : 'visibility';
+  });
+}
+
+bindVisibilityToggle('toggle-password', 'password');
+bindVisibilityToggle('toggle-confirm-password', 'confirm-password');
+</script>
+</body></html>

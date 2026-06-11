@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e0fc",
+                        "inverse-on-surface": "#f1efff",
+                        "inverse-surface": "#2d2f44",
+                        "inverse-primary": "#bbc6e2",
+                        "tertiary-container": "#342300",
+                        "tertiary-fixed": "#ffdea5",
+                        "on-primary-container": "#828da7",
+                        "on-tertiary-fixed": "#261900",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#edecff",
+                        "surface-variant": "#e0e0fc",
+                        "surface-container-high": "#e6e6ff",
+                        "primary-container": "#1b263b",
+                        "on-tertiary-container": "#ab8844",
+                        "on-error": "#ffffff",
+                        "primary": "#051125",
+                        "tertiary": "#190f00",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "secondary": "#5b5d74",
+                        "on-surface-variant": "#45474d",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fbf8ff",
+                        "background": "#fbf8ff",
+                        "on-surface": "#181a2e",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "surface-bright": "#fbf8ff",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d7d8f4",
+                        "primary-fixed": "#d7e2ff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#c4c4df",
+                        "primary-fixed-dim": "#bbc6e2",
+                        "on-primary-fixed-variant": "#3c475d",
+                        "on-secondary-container": "#5f6178",
+                        "on-secondary-fixed": "#181a2e",
+                        "secondary-fixed": "#e0e0fc",
+                        "on-primary-fixed": "#101b30",
+                        "outline-variant": "#c5c6cd",
+                        "surface-tint": "#545e76",
+                        "outline": "#75777d",
+                        "secondary-container": "#ddddf9",
+                        "on-background": "#181a2e",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f4f2ff",
+                        "on-secondary-fixed-variant": "#43455b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#051125]/80 backdrop-blur-md">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-serif tracking-tight text-[#051125] dark:text-[#FBF8FF]">
+                SkyCompare
+            </div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-[#5B5D74] dark:text-[#FBF8FF]/70 hover:text-[#051125] dark:hover:text-[#E9C176] transition-colors duration-300" href="#">Our Trades</a>
+<a class="text-[#5B5D74] dark:text-[#FBF8FF]/70 hover:text-[#051125] dark:hover:text-[#E9C176] transition-colors duration-300" href="#">How it Works</a>
+<a class="text-[#5B5D74] dark:text-[#FBF8FF]/70 hover:text-[#051125] dark:hover:text-[#E9C176] transition-colors duration-300" href="#">Expertise</a>
+<a class="bg-primary text-on-primary px-6 py-2 text-sm font-medium hover:opacity-90 transition-all scale-100 active:scale-95" href="#">Sign In</a>
+</div>
+</div>
+</nav>
+<main class="min-h-screen flex items-center justify-center pt-20 px-6">
+<div class="max-w-xl w-full flex flex-col items-center text-center">
+<div class="mb-12 relative">
+<div class="absolute -inset-8 bg-surface-container-low rounded-full blur-3xl opacity-50"></div>
+<div class="relative w-24 h-24 flex items-center justify-center bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-5xl text-primary" data-icon="mark_email_read">mark_email_read</span>
+</div>
+</div>
+<h1 class="font-headline text-4xl md:text-5xl text-primary tracking-tight mb-6 leading-tight">
+                Verify Your Authority
+            </h1>
+<p class="font-body text-secondary text-lg leading-relaxed mb-10 px-4 md:px-8">
+                We've sent a verification link to your email address. Please click the link to activate your SkyCompare account and start accessing the UK's finest drone professional network.
+            </p>
+<div class="flex flex-col w-full gap-4 sm:flex-row sm:justify-center px-4">
+<button class="bg-primary text-on-primary font-body font-medium px-8 py-4 text-sm transition-all hover:opacity-90 active:scale-95 shadow-lg shadow-primary/5">
+                    Open Email Client
+                </button>
+<button class="bg-transparent text-primary border border-outline-variant/20 font-body font-medium px-8 py-4 text-sm transition-all hover:bg-surface-container-low active:scale-95">
+                    Resend Verification Email
+                </button>
+</div>
+<div class="mt-12 flex items-center gap-2 group">
+<span class="material-symbols-outlined text-secondary text-sm group-hover:text-primary transition-colors" data-icon="arrow_back">arrow_back</span>
+<a class="text-sm font-medium text-secondary hover:text-primary transition-colors border-b border-transparent hover:border-primary pb-0.5" href="#">
+                    Back to Login
+                </a>
+</div>
+<div class="mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-lg text-left">
+<div class="p-6 bg-surface-container-low/40 rounded-lg">
+<span class="material-symbols-outlined text-tertiary-fixed-dim mb-3" data-icon="verified_user">verified_user</span>
+<h3 class="font-headline text-lg text-primary mb-2">Verified Trades</h3>
+<p class="text-sm text-secondary leading-relaxed">Gain immediate access to our directory of verified drone professionals nationwide.</p>
+</div>
+<div class="p-6 bg-surface-container-low/40 rounded-lg">
+<span class="material-symbols-outlined text-tertiary-fixed-dim mb-3" data-icon="flight">flight</span>
+<h3 class="font-headline text-lg text-primary mb-2">Technical Support</h3>
+<p class="text-sm text-secondary leading-relaxed">Need help getting started? Our team is available to guide you through your first match.</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center border-t border-[#181A2E]/5 bg-[#F4F2FF] dark:bg-[#1B263B]">
+<div class="mb-6 md:mb-0">
+<span class="font-sans text-sm tracking-wide text-[#5B5D74] dark:text-[#FBF8FF]/60">
+                © 2026 SkyCompare. All rights reserved. Built for Aerial Excellence.
+            </span>
+</div>
+<div class="flex space-x-8">
+<a class="font-sans text-sm tracking-wide text-[#5B5D74] dark:text-[#FBF8FF]/60 hover:text-[#051125] dark:hover:text-[#E9C176] transition-colors" href="#">Privacy Policy</a>
+<a class="font-sans text-sm tracking-wide text-[#5B5D74] dark:text-[#FBF8FF]/60 hover:text-[#051125] dark:hover:text-[#E9C176] transition-colors" href="#">Terms of Service</a>
+<a class="font-sans text-sm tracking-wide text-[#5B5D74] dark:text-[#FBF8FF]/60 hover:text-[#051125] dark:hover:text-[#E9C176] transition-colors" href="#">Support</a>
+</div>
+</footer>
+<div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-1/2 bg-surface-container-low opacity-20 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 left-0 w-1/4 h-1/2 bg-surface-container-low opacity-30 blur-[100px] rounded-full -translate-x-1/2 translate-y-1/2"></div>
+</div>
+<script type="module">
+import { supabase, getUser, signOut } from './supabase-config.js';
+
+// Handle the auth callback (Supabase redirects here with tokens in the URL hash)
+const hashParams = new URLSearchParams(window.location.hash.substring(1));
+const accessToken = hashParams.get('access_token');
+const refreshToken = hashParams.get('refresh_token');
+
+if (accessToken && refreshToken) {
+  const { data, error } = await supabase.auth.setSession({
+    access_token: accessToken,
+    refresh_token: refreshToken
+  });
+  if (!error) {
+    // Clear hash and show success
+    window.history.replaceState(null, '', window.location.pathname);
+    document.querySelector('h1').textContent = 'Email Verified!';
+    document.querySelector('main p').textContent = 'Your account has been verified successfully. You can now access the full platform.';
+    const icon = document.querySelector('[data-icon="mark_email_read"]');
+    if (icon) icon.textContent = 'check_circle';
+
+    // Redirect after 2 seconds
+    const { user } = await getUser();
+    const { data: profile } = await supabase.from('profiles').select('role').eq('id', user.id).single();
+    setTimeout(() => {
+      window.location.href = profile?.role === 'supplier' ? 'dashboard.html' : 'index.html';
+    }, 2000);
+  }
+}
+
+// Resend verification email
+const resendBtn = [...document.querySelectorAll('button')].find(b => b.textContent.includes('Resend'));
+if (resendBtn) {
+  resendBtn.addEventListener('click', async () => {
+    const { user } = await getUser();
+    if (user?.email) {
+      const { error } = await supabase.auth.resend({ type: 'signup', email: user.email });
+      resendBtn.textContent = error ? 'Error — try again' : 'Email Sent!';
+      setTimeout(() => { resendBtn.textContent = 'Resend Verification Email'; }, 3000);
+    } else {
+      alert('Please sign in first to resend the verification email.');
+    }
+  });
+}
+
+// Open email client
+const openBtn = [...document.querySelectorAll('button')].find(b => b.textContent.includes('Open Email'));
+if (openBtn) {
+  openBtn.addEventListener('click', () => { window.open('https://mail.google.com', '_blank'); });
+}
+
+// Back to login
+const backLink = document.querySelector('a[href="#"]');
+if (backLink && backLink.textContent.includes('Back to Login')) {
+  backLink.href = 'loginpage.html';
+}
+</script>
+<script src="page-transitions.js"></script>
+</body></html>

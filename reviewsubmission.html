@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Share Your Experience | SkyCompare</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#bbc6e2",
+                        "outline-variant": "#c5c6cd",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "inverse-primary": "#bbc6e2",
+                        "secondary": "#5b5d74",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e0e0fc",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#101b30",
+                        "secondary-container": "#ddddf9",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#1b263b",
+                        "surface-bright": "#fbf8ff",
+                        "secondary-fixed": "#e0e0fc",
+                        "on-secondary-fixed-variant": "#43455b",
+                        "surface-tint": "#545e76",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#ab8844",
+                        "surface-container": "#edecff",
+                        "primary": "#051125",
+                        "tertiary-fixed": "#ffdea5",
+                        "surface-dim": "#d7d8f4",
+                        "outline": "#75777d",
+                        "inverse-on-surface": "#f1efff",
+                        "on-primary-container": "#828da7",
+                        "surface-container-low": "#f4f2ff",
+                        "secondary-fixed-dim": "#c4c4df",
+                        "tertiary-container": "#342300",
+                        "surface-variant": "#e0e0fc",
+                        "on-primary-fixed-variant": "#3c475d",
+                        "tertiary": "#190f00",
+                        "on-secondary-fixed": "#181a2e",
+                        "inverse-surface": "#2d2f44",
+                        "background": "#fbf8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d7e2ff",
+                        "on-background": "#181a2e",
+                        "on-surface": "#181a2e",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e6e6ff",
+                        "on-secondary-container": "#5f6178",
+                        "on-surface-variant": "#45474d",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "surface": "#fbf8ff",
+                        "on-tertiary-fixed": "#261900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .star-active {
+            font-variation-settings: 'FILL' 1;
+            color: #E9C176;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed">
+<header class="bg-[#FBF8FF]/80 dark:bg-[#051125]/80 backdrop-blur-md border-b border-[#5B5D74]/10 dark:border-[#5B5D74]/20 docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold font-['Newsreader'] text-[#051125] dark:text-[#FBF8FF] tracking-tight">
+            SkyCompare
+        </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-[#5B5D74] dark:text-[#5B5D74] hover:text-[#051125] dark:hover:text-[#FBF8FF] transition-colors font-['Manrope'] text-sm tracking-wide" href="#">Find Trades</a>
+<a class="text-[#051125] dark:text-[#E9C176] font-bold border-b-2 border-[#051125] dark:border-[#E9C176] pb-1 font-['Manrope'] text-sm tracking-wide" href="#">My Projects</a>
+<a class="text-[#5B5D74] dark:text-[#5B5D74] hover:text-[#051125] dark:hover:text-[#FBF8FF] transition-colors font-['Manrope'] text-sm tracking-wide" href="#">Resources</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-secondary hover:opacity-80 transition-all duration-300">notifications</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/20">
+<img alt="Client profile avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFLw_2C725KG75wAlzuMSutrCeJLJN77jMwZuvg22Axy_FGBiE2fCzOcRaLHlkrptM3Wgw9LR_E5yszEeCp26JQHVkkS5dA4A9MNfVdPWAtAG8qGxKxUbx6egwBeKDEkeKX4HrhPNvJFXiVFeTB9Ps6V2mXtbCWIT10EE4z_6MPZGyR7GRfLHwBTxNqBBjarJeqjQKwaambjBCTuGCWOSujjpeYTlCGaoo6JYO8I8XKWg1I_6j8BnNbe4om0MvJd6YBNfAccXj471v"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-2xl mx-auto px-6 py-16 md:py-24">
+<!-- Header Section -->
+<header class="mb-12 text-center">
+<h1 class="font-headline text-5xl md:text-6xl text-primary mb-6 tracking-tight">Share Your Experience</h1>
+<p class="font-body text-lg text-secondary leading-relaxed mx-auto max-w-xl">
+            Review your recent drone service. Your feedback helps maintain the gold standard across the operator network.
+        </p>
+</header>
+<form class="space-y-12">
+<!-- Service Context -->
+<div class="flex items-center justify-center gap-4 p-6 bg-surface-container-lowest border border-outline-variant/10 rounded-lg">
+<div class="w-16 h-16 rounded overflow-hidden">
+<img alt="Arthur Gable" class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDc6xv-k-dU8RGczpfMTyIpKT18c4P9qchn-X9AmYYsd5bZ0WptanZBvXURdGWkxVLsqn1cgJ19xchN02f8KUI_riITBaTjeLWKD_wRAyMM-i2R8-Zn-aeOpSbGHo4hfjUgmn0hrLckUwKwcQKyrK8VkngriKUneeTETNeyDjdENgRKbskEmpSatc_sa8fPvMG0656S8FC41xqr4C1_WMbV9Gr_AfJmPx7Blw4VJRcsg5Pi32JR2w0xE5gqe5RN3-s1GmYjYaswC5T"/>
+</div>
+<div>
+<h3 class="font-headline text-xl text-primary">Arthur Gable</h3>
+<p class="font-label text-xs text-secondary uppercase tracking-widest">Structural Assessment</p>
+</div>
+</div>
+<!-- Single Primary Rating -->
+<div class="text-center space-y-4">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-primary">Overall Rating</label>
+<div class="flex justify-center gap-2">
+<button class="group" type="button"><span class="material-symbols-outlined text-5xl text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="group" type="button"><span class="material-symbols-outlined text-5xl text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="group" type="button"><span class="material-symbols-outlined text-5xl text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="group" type="button"><span class="material-symbols-outlined text-5xl text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="group" type="button"><span class="material-symbols-outlined text-5xl text-outline-variant/30">star</span></button>
+</div>
+</div>
+<!-- Core Metrics -->
+<div class="space-y-6 pt-4">
+<h2 class="font-label text-[10px] font-bold uppercase tracking-[0.2em] text-center text-secondary/60">Core Metrics</h2>
+<div class="grid grid-cols-1 gap-4">
+<!-- Quality -->
+<div class="flex justify-between items-center bg-surface-container-low p-5 rounded-lg border border-transparent hover:border-outline-variant/20 transition-all">
+<span class="font-headline text-lg text-primary">Overall Quality</span>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<!-- Communication -->
+<div class="flex justify-between items-center bg-surface-container-low p-5 rounded-lg border border-transparent hover:border-outline-variant/20 transition-all">
+<span class="font-headline text-lg text-primary">Communication</span>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-outline-variant/30">star</span>
+</div>
+</div>
+<!-- Value -->
+<div class="flex justify-between items-center bg-surface-container-low p-5 rounded-lg border border-transparent hover:border-outline-variant/20 transition-all">
+<span class="font-headline text-lg text-primary">Value for Money</span>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-outline-variant/30">star</span>
+<span class="material-symbols-outlined text-sm text-outline-variant/30">star</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Review Narrative -->
+<div class="space-y-4">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-primary">Your Narrative</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant/20 focus:border-primary focus:ring-0 rounded-lg p-6 font-body text-primary placeholder:text-secondary/40 placeholder:italic transition-colors" placeholder="Describe the quality of the work, the deliverables, and your overall experience..." rows="6"></textarea>
+</div>
+<!-- Visual Evidence -->
+<div class="space-y-4">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-primary">Visual Evidence</label>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-video relative rounded-lg overflow-hidden group border border-outline-variant/10">
+<img alt="Project photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB60SAJDEFusnX_QN-Xl4pAFue5lb5CJ0X_7ma9EwfgELzOpvWjTzYGtBcAmyrUTj67mMcTA-IIjTXqCQ6GaFbjdEkDoJX-vPT2y9pCXXYgpYG2DLq4Z3wSiZDP2RCf81NkeCSKHXoC8UwpBqFhptenqMyPvc4U7gf-wu_DNP0sq8oWymIOjlOhN7mKfLq-nPeZa2YuTclswYEEqicGDrjYavlJ9mve2WrOzgS5DnYctG8TnSRUCrOcaeeh3mMtfQvIxfPcFL2ymb6b"/>
+<button class="absolute top-2 right-2 bg-primary/90 text-white w-6 h-6 rounded flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-xs">close</span>
+</button>
+</div>
+<button class="aspect-video border-2 border-dashed border-outline-variant/30 flex flex-col items-center justify-center gap-3 bg-white hover:bg-surface-container-low transition-all group rounded-lg" type="button">
+<span class="material-symbols-outlined text-4xl text-primary scale-100 group-hover:scale-110 transition-transform">add_a_photo</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-primary">Upload Photo</span>
+</button>
+</div>
+</div>
+<!-- Verification & CTA -->
+<div class="pt-8 border-t border-outline-variant/10 space-y-8">
+<label class="flex items-start gap-4 cursor-pointer group max-w-lg mx-auto">
+<input class="mt-1 w-5 h-5 rounded-sm border-secondary text-primary focus:ring-tertiary-fixed-dim" type="checkbox"/>
+<span class="font-body text-xs text-secondary leading-relaxed group-hover:text-primary transition-colors">
+                    I verify that I am a genuine customer and this review represents a truthful account of my firsthand experience.
+                </span>
+</label>
+<div class="flex flex-col gap-4">
+<button class="w-full py-5 bg-primary text-on-primary font-label text-xs font-bold uppercase tracking-[0.3em] rounded shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all active:scale-[0.99]" type="submit">
+                    Publish Review
+                </button>
+<button class="w-full py-4 text-secondary font-label text-xs font-bold uppercase tracking-[0.2em] transition-all hover:bg-surface-container-low rounded" type="button">
+                    Save Draft
+                </button>
+</div>
+</div>
+</form>
+</main>
+<footer class="bg-[#F4F2FF] dark:bg-[#1B263B] w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 gap-8 w-full max-w-7xl mx-auto">
+<div class="font-['Newsreader'] text-lg font-semibold text-[#051125] dark:text-[#FBF8FF]">
+            SkyCompare
+        </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-[#5B5D74] dark:text-slate-400 hover:text-[#051125] dark:hover:text-[#E9C176] transition-colors font-['Manrope'] text-sm tracking-wide" href="#">Privacy</a>
+<a class="text-[#5B5D74] dark:text-slate-400 hover:text-[#051125] dark:hover:text-[#E9C176] transition-colors font-['Manrope'] text-sm tracking-wide" href="#">Terms</a>
+<a class="text-[#5B5D74] dark:text-slate-400 hover:text-[#051125] dark:hover:text-[#E9C176] transition-colors font-['Manrope'] text-sm tracking-wide" href="#">Support</a>
+</div>
+<div class="text-[#5B5D74] dark:text-slate-400 font-['Manrope'] text-[10px] uppercase tracking-widest opacity-60">
+            © 2026 SkyCompare
+        </div>
+</div>
+<script type="module">
+import { supabase, getUser } from './supabase-config.js';
+
+let overallRating = 4;
+let qualityRating = 5;
+let communicationRating = 4;
+let valueRating = 3;
+
+// Overall star rating interaction
+const overallStars = document.querySelectorAll('.text-center.space-y-4 button');
+overallStars.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+    overallRating = idx + 1;
+    overallStars.forEach((b, j) => {
+      const star = b.querySelector('.material-symbols-outlined');
+      star.style.fontVariationSettings = j <= idx ? "'FILL' 1" : "'FILL' 0";
+      star.classList.toggle('text-tertiary-fixed-dim', j <= idx);
+      star.classList.toggle('text-outline-variant/30', j > idx);
+    });
+  });
+});
+
+// Core metric rows — make stars clickable
+const metricRows = document.querySelectorAll('.grid.grid-cols-1.gap-4 > div');
+const ratingRefs = [
+  { get: () => qualityRating, set: (v) => qualityRating = v },
+  { get: () => communicationRating, set: (v) => communicationRating = v },
+  { get: () => valueRating, set: (v) => valueRating = v }
+];
+
+metricRows.forEach((row, rIdx) => {
+  const stars = row.querySelectorAll('.material-symbols-outlined');
+  stars.forEach((star, sIdx) => {
+    star.style.cursor = 'pointer';
+    star.addEventListener('click', () => {
+      ratingRefs[rIdx].set(sIdx + 1);
+      stars.forEach((s, j) => {
+        s.style.fontVariationSettings = j <= sIdx ? "'FILL' 1" : "'FILL' 0";
+        s.classList.toggle('text-outline-variant/30', j > sIdx);
+      });
+    });
+  });
+});
+
+// Submit review
+document.querySelector('form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  btn.textContent = 'Publishing...';
+  btn.disabled = true;
+
+  const { user } = await getUser();
+  if (!user) {
+    alert('Please sign in to submit a review.');
+    window.location.href = 'loginpage.html';
+    return;
+  }
+
+  const narrative = document.querySelector('textarea').value;
+  const verified = document.querySelector('input[type="checkbox"]').checked;
+
+  // Get supplier_id from URL params or use a placeholder
+  const params = new URLSearchParams(window.location.search);
+  const supplierId = params.get('supplier');
+
+  if (!supplierId) {
+    alert('No supplier specified. Please navigate here from a completed project.');
+    btn.textContent = 'Publish Review';
+    btn.disabled = false;
+    return;
+  }
+
+  const { error } = await supabase.from('reviews').insert({
+    supplier_id: supplierId,
+    reviewer_id: user.id,
+    project_id: params.get('project') || null,
+    overall_rating: overallRating,
+    quality_rating: qualityRating,
+    communication_rating: communicationRating,
+    value_rating: valueRating,
+    narrative: narrative,
+    is_verified: verified
+  });
+
+  if (error) {
+    alert('Error submitting review: ' + error.message);
+    btn.textContent = 'Publish Review';
+    btn.disabled = false;
+    return;
+  }
+
+  btn.textContent = 'Published!';
+  setTimeout(() => { window.location.href = 'index.html'; }, 1500);
+});
+
+// Save draft
+document.querySelector('button[type="button"]:last-of-type')?.addEventListener('click', () => {
+  const narrative = document.querySelector('textarea').value;
+  localStorage.setItem('review_draft', JSON.stringify({
+    overallRating, qualityRating, communicationRating, valueRating, narrative
+  }));
+  alert('Draft saved locally.');
+});
+</script>
+</footer>
+<script src="page-transitions.js"></script>
+</body></html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mapping &amp; 3D Model Requirements | SkyCompare</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline": "#75777d",
+                        "tertiary": "#190f00",
+                        "primary-container": "#1b263b",
+                        "inverse-surface": "#2d2f44",
+                        "primary-fixed": "#d7e2ff",
+                        "secondary-fixed-dim": "#c4c4df",
+                        "on-primary-fixed-variant": "#3c475d",
+                        "surface-container-highest": "#e0e0fc",
+                        "on-surface-variant": "#45474d",
+                        "error": "#ba1a1a",
+                        "secondary": "#5b5d74",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#342300",
+                        "on-surface": "#181a2e",
+                        "inverse-primary": "#bbc6e2",
+                        "on-secondary-fixed": "#181a2e",
+                        "surface-dim": "#d7d8f4",
+                        "on-background": "#181a2e",
+                        "surface-bright": "#fbf8ff",
+                        "background": "#fbf8ff",
+                        "primary-fixed-dim": "#bbc6e2",
+                        "primary": "#051125",
+                        "on-tertiary-container": "#ab8844",
+                        "surface-container-low": "#f4f2ff",
+                        "surface-container-high": "#e6e6ff",
+                        "surface": "#fbf8ff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "surface-variant": "#e0e0fc",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#101b30",
+                        "on-secondary-container": "#5f6178",
+                        "secondary-container": "#ddddf9",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#545e76",
+                        "tertiary-fixed": "#ffdea5",
+                        "on-secondary-fixed-variant": "#43455b",
+                        "outline-variant": "#c5c6cd",
+                        "inverse-on-surface": "#f1efff",
+                        "surface-container": "#edecff",
+                        "on-primary-container": "#828da7",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#e0e0fc",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#261900"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- Navigation from COMPONENTS_11 -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-md border-b border-slate-200/20 shadow-sm">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-headline tracking-tight text-slate-900">SkyCompare</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 hover:text-slate-900 transition-colors font-label text-sm tracking-wide" href="#">Find Trade</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors font-label text-sm tracking-wide" href="#">How it Works</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors font-label text-sm tracking-wide" href="#">Pro Membership</a>
+<button class="bg-primary text-on-primary px-5 py-2 text-sm font-semibold tracking-wide hover:opacity-90 transition-all rounded-sm uppercase">Get Quote</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section matching SCREEN_13/SCREEN_7 style -->
+<header class="relative h-[409px] min-h-[400px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Electrical Engineering Blueprint" class="w-full h-full object-cover grayscale opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuwsazj6Ejh0Vmrwi9uQ466NgRciSGQfDm6ddbAU1PqZ8WFQFGb8KeQl7PiHskTsdJiptKmMgrpcV7IR1AmW3WxpcRbLMwbevGAbDqhhS7nfQZDt8ItRgo-0Exi9H21AEFZ1Fga-mkznmPPi94VV67DofN7VcWOlW-BWDX2h3wSKmvLykAK518bKTWs_tmQMEwcH7lRyL37mB6lghNC2jCai49vzzpk5KGVjxMAx67yW0moY-_BuQELun82tYe6GCjo9ezD8oTxgrw"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary via-primary/90 to-transparent"></div>
+</div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="max-w-3xl">
+<span class="font-label text-tertiary-fixed-dim text-xs tracking-[0.2em] uppercase mb-4 block">Survey-Grade Data</span>
+<h1 class="font-headline text-5xl md:text-7xl text-white tracking-tight mb-6">Mapping &amp; 3D Models</h1>
+<p class="text-on-primary-container text-lg max-w-xl leading-relaxed">
+                        Photogrammetry, orthomosaics, point clouds and volumetric measurement from CAA-approved drone mapping specialists. Get instant matches with live price estimates.
+                    </p>
+</div>
+</div>
+</header>
+<section class="container mx-auto px-6 -mt-16 relative z-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Form Column -->
+<div class="lg:col-span-8">
+<div class="bg-surface-container-lowest p-8 md:p-12 shadow-2xl shadow-on-surface/5">
+<form class="space-y-12">
+<!-- 01 Project Scope -->
+<div>
+<h2 class="font-headline text-2xl mb-8 flex items-center gap-3">
+<span class="font-headline italic text-tertiary-fixed-dim text-4xl opacity-50">01</span>
+                                    Project Scope
+                                </h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<label class="group relative flex flex-col p-6 cursor-pointer bg-surface-container-low border-b-2 border-transparent hover:bg-surface-container-high transition-all text-center items-center">
+<input checked="" class="sr-only" name="service_type" type="radio"/>
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">map</span>
+<span class="font-headline text-lg mb-1">Orthomosaic</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary">2D Site Mapping</span>
+</label>
+<label class="group relative flex flex-col p-6 cursor-pointer bg-surface-container-low border-b-2 border-transparent hover:bg-surface-container-high transition-all text-center items-center">
+<input class="sr-only" name="service_type" type="radio"/>
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">view_in_ar</span>
+<span class="font-headline text-lg mb-1">3D Model</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary">Photogrammetry</span>
+</label>
+<label class="group relative flex flex-col p-6 cursor-pointer bg-surface-container-low border-b-2 border-transparent hover:bg-surface-container-high transition-all text-center items-center">
+<input class="sr-only" name="service_type" type="radio"/>
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">landscape</span>
+<span class="font-headline text-lg mb-1">Topographic</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary">Elevation &amp; Contours</span>
+</label>
+<label class="group relative flex flex-col p-6 cursor-pointer bg-surface-container-low border-b-2 border-transparent hover:bg-surface-container-high transition-all text-center items-center">
+<input class="sr-only" name="service_type" type="radio"/>
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">square_foot</span>
+<span class="font-headline text-lg mb-1">Volumetrics</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary">Stockpile Measurement</span>
+</label>
+</div>
+</div>
+<!-- 02 Property Details -->
+<div>
+<h2 class="font-headline text-2xl mb-8 flex items-center gap-3">
+<span class="font-headline italic text-tertiary-fixed-dim text-4xl opacity-50">02</span>
+                                    Property Details
+                                </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-secondary">Location (Postcode)</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-0 focus:bg-surface-container-highest border-b border-primary/10 focus:border-primary transition-all p-4 font-body" placeholder="e.g. NG1 1AA" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-secondary">Approx. Budget</label>
+<select class="w-full bg-surface-container-low border-none focus:ring-0 focus:bg-surface-container-highest border-b border-primary/10 focus:border-primary transition-all p-4 font-body appearance-none">
+<option>Under £500</option>
+<option>£500 - £1,500</option>
+<option>£1,500 - £5k</option>
+<option>£5k +</option>
+</select>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-secondary">Project Scope &amp; Notes</label>
+<textarea class="w-full bg-surface-container-low border-none focus:ring-0 focus:bg-surface-container-highest border-b border-primary/10 focus:border-primary transition-all p-4 font-body" placeholder="Describe the site, area in hectares, required outputs (orthomosaic, DSM, point cloud) and accuracy needs..." rows="4"></textarea>
+</div>
+</div>
+</div>
+<!-- 03 Contact Information -->
+<div>
+<h2 class="font-headline text-2xl mb-8 flex items-center gap-3">
+<span class="font-headline italic text-tertiary-fixed-dim text-4xl opacity-50">03</span>
+                                    Contact Information
+                                </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-secondary">Full Name</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-0 focus:bg-surface-container-highest border-b border-primary/10 focus:border-primary transition-all p-4 font-body" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-secondary">Contact Number</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-0 focus:bg-surface-container-highest border-b border-primary/10 focus:border-primary transition-all p-4 font-body" type="tel"/>
+</div>
+</div>
+</div>
+<div class="pt-6">
+<button class="w-full md:w-auto bg-primary text-on-primary px-12 py-5 font-label text-sm uppercase tracking-[0.2em] hover:bg-primary-container transition-all flex items-center justify-center gap-4" type="submit">
+                                    Get Instant Matches
+                                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<p class="mt-4 text-[10px] text-secondary font-label tracking-wide text-center md:text-left">
+                                    Average response time: 2 working hours. All projects are certified to NICEIC/NAPIT standards.
+                                </p>
+</div>
+</form>
+</div>
+</div>
+<!-- Sidebar matching SCREEN_13/SCREEN_7 style -->
+<aside class="lg:col-span-4 space-y-8">
+<div class="bg-primary p-8 text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary-fixed/10 -mr-16 -mt-16 rounded-full blur-3xl"></div>
+<h3 class="font-headline text-2xl mb-4">Survey-Grade Standards</h3>
+<p class="text-on-primary-container text-sm leading-relaxed mb-6">
+                            We list verified drone mapping specialists working to survey-grade accuracy, with credentials and insurance checked before listing.
+                        </p>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed-dim">verified</span>
+<div>
+<p class="font-label text-[10px] uppercase tracking-widest text-tertiary-fixed-dim">CAA Authorised</p>
+<p class="text-sm font-body">GVC qualified, fully insured pilots</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed-dim">security</span>
+<div>
+<p class="font-label text-[10px] uppercase tracking-widest text-tertiary-fixed-dim">RTK / PPK Capable</p>
+<p class="text-sm font-body">Centimetre-level positional accuracy</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-8 border border-outline-variant/20">
+<h4 class="font-headline text-xl mb-6">Regional Focus</h4>
+<div class="space-y-3">
+<div class="flex justify-between items-center py-2 border-b border-outline-variant/10">
+<span class="text-sm text-on-surface">Nottinghamshire</span>
+<span class="text-xs font-label text-secondary">Rapid Turnaround</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-outline-variant/10">
+<span class="text-sm text-on-surface">Derbyshire</span>
+<span class="text-xs font-label text-secondary">Construction Specialists</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-outline-variant/10">
+<span class="text-sm text-on-surface">Leicestershire</span>
+<span class="text-xs font-label text-secondary">Agri &amp; Land Experts</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="text-sm text-on-surface">Lincolnshire</span>
+<span class="text-xs font-label text-secondary">Volumetric Analysis</span>
+</div>
+</div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden aspect-[4/5]">
+<img alt="Precision Electrical Work" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUCu9CAS_4TEibHVYw6Pkveez6HEAB_BI6TV-MaT3Fk555M-wQ4E5qHh4gUKKtgdGyLVRnP1t8_PoJslv5iCCQoMiSgNICQbUopyAdppoe21-MT8nhkga-Lj7q60oDtGLvfqZwqWA6upeW3Jd81ql9CFrDJ7IM0C6GeswM7lS04JExu_hHgtqo1HPFDm4uacCzjWCayxs3ko3YYuDPlBo_3bwuk2ISMh-byNqAHoNFVOluoHd4omz6ETUu7j7n1ip2ccNsyTmC1QMT"/>
+<div class="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-all"></div>
+<div class="absolute bottom-0 left-0 p-6 text-white">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] mb-2">Portfolio: Quarry Volumetrics</p>
+<h5 class="font-headline text-2xl italic">"Precision in every pixel."</h5>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<!-- How Matching Works section -->
+<section class="container mx-auto px-6 py-24">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl mb-4">How Matching Works</h2>
+<div class="w-12 h-px bg-tertiary-fixed-dim mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="text-center space-y-4">
+<span class="font-headline text-5xl text-primary/10 block italic">01</span>
+<h6 class="font-label text-xs uppercase tracking-widest font-bold">Requirement</h6>
+<p class="text-sm text-secondary px-4">Input your property details and the specific drone service you need.</p>
+</div>
+<div class="text-center space-y-4">
+<span class="font-headline text-5xl text-primary/10 block italic">02</span>
+<h6 class="font-label text-xs uppercase tracking-widest font-bold">Matching</h6>
+<p class="text-sm text-secondary px-4">Our algorithm pairs you with specialized electrical contractors.</p>
+</div>
+<div class="text-center space-y-4">
+<span class="font-headline text-5xl text-primary/10 block italic">03</span>
+<h6 class="font-label text-xs uppercase tracking-widest font-bold">Consultation</h6>
+<p class="text-sm text-secondary px-4">Receive initial feasibility assessments and cost specifications.</p>
+</div>
+<div class="text-center space-y-4">
+<span class="font-headline text-5xl text-primary/10 block italic">04</span>
+<h6 class="font-label text-xs uppercase tracking-widest font-bold">Execution</h6>
+<p class="text-sm text-secondary px-4">Formalize the specifications and receive signed-off technical certification.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer from COMPONENTS_11 -->
+<footer class="bg-slate-900 py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div>
+<div class="text-lg font-headline text-white mb-6">SkyCompare</div>
+<p class="text-slate-400 text-xs leading-relaxed max-w-xs">
+                    Setting the standard for UK drone services through precision, safety, and modern innovation.
+                </p>
+</div>
+<div>
+<h6 class="text-xs tracking-widest uppercase font-label text-amber-200 mb-6">Expertise</h6>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white text-xs transition-colors font-label uppercase tracking-widest" href="#">Aerial Surveys</a></li>
+<li><a class="text-slate-400 hover:text-white text-xs transition-colors font-label uppercase tracking-widest" href="#">Roof Inspections</a></li>
+<li><a class="text-slate-400 hover:text-white text-xs transition-colors font-label uppercase tracking-widest" href="#">Thermal Imaging</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-xs tracking-widest uppercase font-label text-amber-200 mb-6">Company</h6>
+<ul class="space-y-3">
+<li><a class="text-amber-200 hover:text-white text-xs transition-colors font-label uppercase tracking-widest" href="#">Mapping &amp; 3D Models</a></li>
+<li><a class="text-slate-400 hover:text-white text-xs transition-colors font-label uppercase tracking-widest" href="#">Site Monitoring</a></li>
+<li><a class="text-slate-400 hover:text-white text-xs transition-colors font-label uppercase tracking-widest" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="flex flex-col justify-between">
+<div>
+<h6 class="text-xs tracking-widest uppercase font-label text-amber-200 mb-6">Connect</h6>
+<p class="text-slate-400 text-xs font-label uppercase tracking-widest">United Kingdom</p>
+<p class="text-slate-400 text-xs font-label uppercase tracking-widest">info@skycompare.co.uk</p>
+</div>
+<div class="mt-8">
+<p class="text-slate-500 text-[10px] font-label tracking-widest uppercase">
+                        © 2026 SkyCompare. Trades Found Easy.
+                    </p>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto bg-slate-800 h-px w-full my-8"></div>
+<script type="module">
+import { initTradeRequirementForm } from './trade-requirements.js';
+initTradeRequirementForm('Mapping & 3D Models');
+</script>
+</footer>
+<script src="page-transitions.js"></script>
+</body></html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkyCompare - Project Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#5f6178",
+                        "on-secondary-fixed": "#181a2e",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "surface-tint": "#545e76",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#43455b",
+                        "outline-variant": "#c5c6cd",
+                        "on-tertiary-container": "#ab8844",
+                        "inverse-primary": "#bbc6e2",
+                        "secondary-fixed-dim": "#c4c4df",
+                        "outline": "#75777d",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#101b30",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fbf8ff",
+                        "on-background": "#181a2e",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "primary-fixed-dim": "#bbc6e2",
+                        "surface-container": "#edecff",
+                        "surface-container-highest": "#e0e0fc",
+                        "tertiary-fixed": "#ffdea5",
+                        "on-tertiary-fixed": "#261900",
+                        "inverse-on-surface": "#f1efff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d7e2ff",
+                        "surface-container-high": "#e6e6ff",
+                        "surface-variant": "#e0e0fc",
+                        "inverse-surface": "#2d2f44",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#ddddf9",
+                        "secondary": "#5b5d74",
+                        "surface-dim": "#d7d8f4",
+                        "tertiary": "#190f00",
+                        "secondary-fixed": "#e0e0fc",
+                        "on-primary-container": "#828da7",
+                        "on-primary-fixed-variant": "#3c475d",
+                        "on-surface-variant": "#45474d",
+                        "background": "#fbf8ff",
+                        "surface-container-low": "#f4f2ff",
+                        "surface": "#fbf8ff",
+                        "primary-container": "#1b263b",
+                        "tertiary-container": "#342300",
+                        "primary": "#051125",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#181a2e"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active { color: #051125; }
+        .step-inactive { color: #5B5D74; opacity: 0.5; }
+        .input-underline:focus-within { border-bottom-color: #051125; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-8 py-4 max-w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200/20 dark:border-slate-800/20 z-50">
+<div class="font-serif italic text-xl font-bold text-slate-900 dark:text-slate-100">SkyCompare</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-sans Manrope text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-200" href="#">Find a Drone Pro</a>
+<a class="font-sans Manrope text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-200" href="#">For Drone Operators</a>
+<a class="font-sans Manrope text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-200" href="#">How it Works</a>
+</nav>
+<button class="bg-primary text-on-primary px-5 py-2 text-xs font-bold tracking-wider uppercase transition-transform scale-95 duration-150 ease-in-out hover:scale-100">Operator Sign-up</button>
+</header>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-6xl mx-auto">
+<!-- Progress Indicator -->
+<div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-outline-variant/20 pb-8">
+<div class="max-w-xl">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-2 block">Step 02 of 04</span>
+<h1 class="font-headline text-4xl md:text-5xl tracking-tight text-primary leading-tight">Define Your Drone Service Requirements</h1>
+</div>
+<div class="flex gap-4 items-center">
+<div class="w-8 h-1 bg-primary"></div>
+<div class="w-8 h-1 bg-primary"></div>
+<div class="w-8 h-1 bg-surface-container-highest"></div>
+<div class="w-8 h-1 bg-surface-container-highest"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Form Section -->
+<form class="lg:col-span-8 space-y-20">
+<!-- Section 1: Service Type -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<span class="font-headline text-2xl italic text-secondary/40">01</span>
+<h2 class="font-headline text-2xl text-primary">Select Service Type</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Option Card 1 -->
+<label class="relative group cursor-pointer">
+<input checked="" class="sr-only peer" name="survey_type" type="radio"/>
+<div class="p-6 bg-surface-container-lowest transition-all duration-300 peer-checked:ring-1 peer-checked:ring-primary/20 peer-checked:bg-white shadow-sm hover:shadow-md h-full">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="travel_explore">travel_explore</span>
+<div class="w-4 h-4 rounded-full border border-outline-variant peer-checked:bg-primary"></div>
+</div>
+<h3 class="font-body font-bold text-primary mb-2">Aerial Building Survey</h3>
+<p class="font-body text-sm text-secondary leading-relaxed">Most popular for commercial property. High-resolution external imaging of roofs, facades and hard-to-access areas.</p>
+</div>
+</label>
+<!-- Option Card 2 -->
+<label class="relative group cursor-pointer">
+<input class="sr-only peer" name="survey_type" type="radio"/>
+<div class="p-6 bg-surface-container-low transition-all duration-300 peer-checked:ring-1 peer-checked:ring-primary/20 shadow-sm hover:shadow-md h-full">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="flight">flight</span>
+<div class="w-4 h-4 rounded-full border border-outline-variant peer-checked:bg-primary"></div>
+</div>
+<h3 class="font-body font-bold text-primary mb-2">Full Site Survey</h3>
+<p class="font-body text-sm text-secondary leading-relaxed">In-depth coverage for larger sites — land, assets, perimeter and progress imaging with detailed reporting.</p>
+</div>
+</label>
+</div>
+</section>
+<!-- Section 2: Property Details -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<span class="font-headline text-2xl italic text-secondary/40">02</span>
+<h2 class="font-headline text-2xl text-primary">Property Specification</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<div class="space-y-1 group">
+<label class="font-label text-xs uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Postcode of Property</label>
+<input id="svc-postcode" class="w-full bg-surface-container-low border-none border-b border-transparent focus:ring-0 focus:border-primary focus:bg-surface-container-highest transition-all py-3 px-0 font-body text-lg" placeholder="e.g. NG1 1AA" type="text"/>
+</div>
+<div class="space-y-1 group">
+<label class="font-label text-xs uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Property Type</label>
+<select id="svc-property-type" class="w-full bg-surface-container-low border-none border-b border-transparent focus:ring-0 focus:border-primary focus:bg-surface-container-highest transition-all py-3 px-0 font-body text-lg appearance-none">
+<option>Commercial / Industrial Unit</option>
+<option>Office / Retail Building</option>
+<option>Residential Block</option>
+<option>Land / Development Site</option>
+<option>Infrastructure Asset</option>
+</select>
+</div>
+<div class="space-y-1 group">
+<label class="font-label text-xs uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Approx. Site Size</label>
+<div class="flex gap-2 py-2">
+<button class="w-10 h-10 border border-outline-variant/30 hover:bg-primary hover:text-on-primary transition-colors" type="button">S</button>
+<button class="w-10 h-10 border border-outline-variant/30 hover:bg-primary hover:text-on-primary transition-colors" type="button">M</button>
+<button class="w-10 h-10 bg-primary text-on-primary" type="button">L</button>
+<button class="w-10 h-10 border border-outline-variant/30 hover:bg-primary hover:text-on-primary transition-colors" type="button">XL</button>
+<button class="w-10 h-10 border border-outline-variant/30 hover:bg-primary hover:text-on-primary transition-colors" type="button">XXL</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Contact Info -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<span class="font-headline text-2xl italic text-secondary/40">03</span>
+<h2 class="font-headline text-2xl text-primary">Your Contact Information</h2>
+</div>
+<div class="space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-1 group">
+<label class="font-label text-xs uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Full Name</label>
+<input id="svc-name" class="w-full bg-surface-container-low border-none border-b border-transparent focus:ring-0 focus:border-primary focus:bg-surface-container-highest transition-all py-3 px-0 font-body text-lg" placeholder="Enter your name" type="text"/>
+</div>
+<div class="space-y-1 group">
+<label class="font-label text-xs uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Phone Number</label>
+<input id="svc-phone" class="w-full bg-surface-container-low border-none border-b border-transparent focus:ring-0 focus:border-primary focus:bg-surface-container-highest transition-all py-3 px-0 font-body text-lg" placeholder="07123 456789" type="tel"/>
+</div>
+</div>
+<div class="space-y-1 group">
+<label class="font-label text-xs uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Email Address</label>
+<input id="svc-email" class="w-full bg-surface-container-low border-none border-b border-transparent focus:ring-0 focus:border-primary focus:bg-surface-container-highest transition-all py-3 px-0 font-body text-lg" placeholder="email@example.com" type="email"/>
+</div>
+</div>
+</section>
+<div class="pt-12 flex items-center justify-between">
+<button class="flex items-center gap-2 text-secondary font-label text-sm uppercase tracking-widest hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+                        Back to Services
+                    </button>
+<button class="bg-primary text-on-primary px-12 py-5 font-bold tracking-widest uppercase text-sm hover:bg-primary-container transition-all shadow-xl shadow-primary/10" type="submit">
+                        Continue to Quotes
+                    </button>
+</div>
+</form>
+<!-- Sidebar / Contextual Card -->
+<aside class="lg:col-span-4 space-y-8">
+<div class="bg-surface-container-low p-8 relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline text-xl text-primary mb-4">Why use SkyCompare?</h4>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div class="font-body text-sm leading-relaxed">
+<strong class="block text-primary">Verified Professionals</strong>
+                                    Every drone operator is CAA authorised, fully insured, and covers your exact postcode area.
+                                </div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="speed" style="font-variation-settings: 'FILL' 1;">speed</span>
+<div class="font-body text-sm leading-relaxed">
+<strong class="block text-primary">Instant Comparison</strong>
+                                    Instantly compare live price estimates, qualifications and full contact details.
+                                </div>
+</li>
+</ul>
+</div>
+<!-- Aesthetic Accent -->
+<div class="absolute -right-8 -bottom-8 opacity-5">
+<span class="material-symbols-outlined text-[120px]" data-icon="travel_explore">travel_explore</span>
+</div>
+</div>
+<div class="p-8 border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-secondary-container/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="help_outline">help_outline</span>
+</div>
+<h4 class="font-body font-bold text-sm text-primary">Need Assistance?</h4>
+</div>
+<p class="font-body text-xs text-secondary leading-loose mb-4">
+                        Not sure which drone service is right for you? Our team can help you decide based on your property and project goals.
+                    </p>
+<a class="text-xs font-bold text-primary underline underline-offset-4 decoration-tertiary-fixed-dim" href="#">Talk to a specialist</a>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200/20">
+<div class="w-full py-12 px-8 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-2 md:col-span-1">
+<div class="font-serif text-lg font-bold text-slate-900 dark:text-slate-100 mb-4">SkyCompare</div>
+<p class="font-sans Manrope text-xs tracking-wide text-slate-500 uppercase leading-relaxed">
+                    Connecting commercial clients directly with verified drone professionals.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="font-sans Manrope text-xs tracking-wide uppercase font-bold text-slate-900 dark:text-white mb-2">Services</h5>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 hover:underline decoration-slate-300 underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Thermal Imaging</a>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 hover:underline decoration-slate-300 underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Roof Inspections</a>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 hover:underline decoration-slate-300 underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Aerial Surveys</a>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="font-sans Manrope text-xs tracking-wide uppercase font-bold text-slate-900 dark:text-white mb-2">Support</h5>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 hover:underline decoration-slate-300 underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 hover:underline decoration-slate-300 underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-sans Manrope text-xs tracking-wide uppercase text-slate-500 hover:underline decoration-slate-300 underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Operator Registration</a>
+</div>
+<div class="col-span-2 md:col-span-1 flex flex-col justify-end">
+<p class="font-sans Manrope text-[10px] tracking-wide uppercase text-slate-400">
+                    © 2026 SkyCompare Drone Directory. Registered in England &amp; Wales.
+                </p>
+</div>
+</div>
+<script type="module">
+import { supabase, getUser } from './supabase-config.js';
+
+let selectedBedrooms = 3;
+let selectedSurveyType = 'Aerial Building Survey';
+
+// Bedroom selector
+const bedroomBtns = document.querySelectorAll('.flex.gap-2.py-2 button');
+bedroomBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    bedroomBtns.forEach(b => { b.className = 'w-10 h-10 border border-outline-variant/30 hover:bg-primary hover:text-on-primary transition-colors'; });
+    btn.className = 'w-10 h-10 bg-primary text-on-primary';
+    const sizeMap = {S:1, M:2, L:3, XL:4, XXL:5};
+    selectedBedrooms = sizeMap[btn.textContent.trim()] || 3;
+  });
+});
+
+// Survey type radio
+document.querySelectorAll('input[name="survey_type"]').forEach(radio => {
+  radio.addEventListener('change', () => {
+    selectedSurveyType = radio.closest('label').querySelector('h3').textContent;
+  });
+});
+
+// Form submit
+document.querySelector('form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
+
+  const postcode = document.getElementById('svc-postcode').value;
+  const name = document.getElementById('svc-name').value;
+  const email = document.getElementById('svc-email').value;
+
+  if (!postcode || !name || !email) {
+    alert('Please fill in all required fields.');
+    btn.textContent = 'Continue to Quotes';
+    btn.disabled = false;
+    return;
+  }
+
+  const { user } = await getUser();
+
+  const { data, error } = await supabase.from('projects').insert({
+    homeowner_id: user?.id || null,
+    trade_type: 'Aerial Survey',
+    survey_type: selectedSurveyType,
+    property_postcode: postcode,
+    property_type: document.getElementById('svc-property-type').value,
+    bedrooms: selectedBedrooms,
+    contact_name: name,
+    contact_phone: document.getElementById('svc-phone').value,
+    contact_email: email,
+    status: 'open'
+  }).select().single();
+
+  if (error) {
+    alert('Error submitting project: ' + error.message);
+    btn.textContent = 'Continue to Quotes';
+    btn.disabled = false;
+    return;
+  }
+
+  // Lead matching to suppliers happens server-side via a database trigger
+  // on `projects` insert — no client-side step needed here.
+  window.location.href = 'quotes.html?project=' + data.id;
+});
+</script>
+</footer>
+<script src="page-transitions.js"></script>
+</body></html>
